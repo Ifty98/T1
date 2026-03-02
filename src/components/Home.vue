@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import pic1 from "@/assets/pic1.png";
-import graphic from "@/assets/graphic.svg";
-import web from "@/assets/web.svg";
-import marketing from "@/assets/marketing.svg";
-import tick from "@/assets/tick.svg";
-import group from "@/assets/group.svg";
-import calendar from "@/assets/calendar.svg";
-import book from "@/assets/book.svg";
-import account from "@/assets/account.png";
+import pic1 from "@/assets/Home/pic1.png";
+import graphic from "@/assets/Home/graphic.svg";
+import web from "@/assets/Home/web.svg";
+import marketing from "@/assets/Home/marketing.svg";
+import tick from "@/assets/Home/tick.svg";
+import group from "@/assets/Home/group.svg";
+import calendar from "@/assets/Home/calendar.svg";
+import book from "@/assets/Home/book.svg";
+import account from "@/assets/Home/account.png";
 </script>
 
 <template>

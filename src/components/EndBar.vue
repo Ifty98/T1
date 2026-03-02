@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import FaqCard from "@/components/FaqCard.vue"
 import logo from "@/assets/logo.svg"
-import facebook from "@/assets/facebook.svg"
-import twitter from "@/assets/twitter.svg"
-import linkedin from "@/assets/linkedin.svg"
-import mail from "@/assets/mail.svg"
-import phone from "@/assets/phone.svg"
-import location from "@/assets/location.svg"
+import facebook from "@/assets/EndBar/facebook.svg"
+import twitter from "@/assets/EndBar/twitter.svg"
+import linkedin from "@/assets/EndBar/linkedin.svg"
+import mail from "@/assets/EndBar/mail.svg"
+import phone from "@/assets/EndBar/phone.svg"
+import location from "@/assets/EndBar/location.svg"
 </script>
 
 <template>
