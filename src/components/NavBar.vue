@@ -89,12 +89,14 @@ const isServicesOpen = ref(false)
 
         <!-- RIGHT (Book Button, always visible) -->
         <div class="min-w-max">
-          <button
-            class="bg-blue-800 cursor-pointer text-white rounded-full px-4 py-2 flex items-center gap-2 whitespace-nowrap hover:bg-black transition duration-300 text-sm"
-            type="button">
-            <img :src="account" alt="" class="h-5">
-            Book a Consultation
-          </button>
+          <router-link to="/contact">
+            <button
+              class="bg-blue-800 cursor-pointer text-white rounded-full px-4 py-2 flex items-center gap-2 whitespace-nowrap hover:bg-black transition duration-300 text-sm"
+              type="button">
+              <img :src="account" alt="" class="h-5">
+              Book a Consultation
+            </button>
+          </router-link>
         </div>
 
       </div>
@@ -154,6 +156,18 @@ const isServicesOpen = ref(false)
 
               <RouterLink to="/services" class="block py-2 hover:bg-gray-200 rounded-lg">
                 Brand Identity & Design
+              </RouterLink>
+
+              <RouterLink to="/services" class="block py-2 hover:bg-gray-200 rounded-lg">
+                E-Commerce Solutions
+              </RouterLink>
+
+              <RouterLink to="/services" class="block py-2 hover:bg-gray-200 rounded-lg">
+                Social Media Marketing
+              </RouterLink>
+
+              <RouterLink to="/services" class="block py-2 hover:bg-gray-200 rounded-lg">
+                SEO & Paid Advertising
               </RouterLink>
 
             </div>

@@ -8,6 +8,27 @@ import group from "@/assets/Home/group.svg";
 import calendar from "@/assets/Home/calendar.svg";
 import book from "@/assets/Home/book.svg";
 import account from "@/assets/Home/account.png";
+
+import { ref, onMounted } from "vue"
+
+const text = "Design, Web & Marketing"
+const typedText = ref("")
+let index = 0
+const typingFinished = ref(false)
+
+onMounted(() => {
+  const type = () => {
+    if (index < text.length) {
+      typedText.value += text[index]
+      index++
+      setTimeout(type, 100)
+    } else {
+      typingFinished.value = true
+    }
+  }
+
+  type()
+})
 </script>
 
 <template>
@@ -21,7 +42,8 @@ import account from "@/assets/Home/account.png";
           </h1>
 
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-orange-400">
-            Design, Web & Marketing
+            {{ typedText }}
+            <span v-if="!typingFinished" class="cursor">|</span>
           </h2>
 
           <p class="py-6 text-gray-200 max-w-xl mx-auto lg:mx-0">
@@ -275,4 +297,13 @@ import account from "@/assets/Home/account.png";
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.cursor {
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+</style>

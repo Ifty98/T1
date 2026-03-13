@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import background1 from "@/assets/background-1.png"
-import logo from "@/assets/logo.svg"
 import brand from "@/assets/Services/Brand identity.png"
 import UXUIDesign from "@/assets/Services/UX-UI Design.png"
 import WebDev from "@/assets/Services/Web Dev.png"
