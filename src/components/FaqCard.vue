@@ -9,7 +9,8 @@ function toggleCard() {
 </script>
 
 <template>
-  <div class="bg-blue-900 w-full rounded-lg px-2 xl:px-0 py-5 text-white">
+  <div class="bg-blue-900 w-full rounded-lg px-2 xl:px-0 py-5 text-white cursor-pointer" 
+       @click="toggleCard">
     <div class="grid grid-cols-8 gap-2">
       <div class="flex justify-center">
         <p class="bg-black p-3 rounded-lg flex items-center justify-center"><slot name="number" /></p>
@@ -22,7 +23,7 @@ function toggleCard() {
       </div>
       <div class="flex justify-center py-1">
         <button
-          @click="toggleCard"
+          
           class="cursor-pointer text-xl"
         >
           {{ isOpen ? "~" : "+" }}

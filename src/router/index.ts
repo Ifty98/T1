@@ -25,7 +25,10 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  linkActiveClass: 'text-white bg-black'
+  linkActiveClass: 'bg-orange-400',
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 }
+  }
 })
 
 export default router

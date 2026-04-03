@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import NavBar from './components/NavBar.vue'
 import EndBar from "@/components/EndBar.vue"
-import Contact from "@/components/Contact.vue"
 </script>
 
 <template>

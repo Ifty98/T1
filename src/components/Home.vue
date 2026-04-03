@@ -8,6 +8,10 @@ import group from "@/assets/Home/group.svg";
 import calendar from "@/assets/Home/calendar.svg";
 import book from "@/assets/Home/book.svg";
 import account from "@/assets/Home/account.png";
+import ifty from "@/assets/Home/Photos/Ifty.png";
+import sejan from "@/assets/Home/Photos/Sejan.png";
+import tareq from "@/assets/Home/Photos/Tareq.png";
+import sabbir from "@/assets/Home/Photos/Sabbir.png";
 
 import { ref, onMounted } from "vue"
 
@@ -29,6 +33,28 @@ onMounted(() => {
 
   type()
 })
+
+const currentSlide = ref(0)
+const startX = ref(0)
+const endX = ref(0)
+
+const handleTouchStart = (e: TouchEvent) => {
+  startX.value = e.touches[0]!.clientX
+}
+
+const handleTouchMove = (e: TouchEvent) => {
+  endX.value = e.touches[0]!.clientX
+}
+
+const handleTouchEnd = () => {
+  const diff = startX.value - endX.value
+
+  if (diff > 50) {
+    currentSlide.value = (currentSlide.value + 1) % 4
+  } else if (diff < -50) {
+    currentSlide.value = (currentSlide.value - 1 + 4) % 4
+  }
+}
 </script>
 
 <template>
@@ -53,14 +79,12 @@ onMounted(() => {
 
           <!-- BUTTONS -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button type="button"
-              class="bg-white text-black font-bold rounded-lg py-3 px-6 hover:bg-gray-300 
+            <button type="button" class="bg-white text-black font-bold rounded-lg py-3 px-6 hover:bg-gray-300 
               cursor-pointer transition duration-300">
               Explore Services
             </button>
 
-            <button type="button"
-              class="bg-white text-black font-bold rounded-lg py-3 px-6 hover:bg-gray-300 
+            <button type="button" class="bg-white text-black font-bold rounded-lg py-3 px-6 hover:bg-gray-300 
               cursor-pointer transition duration-300">
               Our Portfolio
             </button>
@@ -74,152 +98,127 @@ onMounted(() => {
       </div>
     </div>
   </div>
-  <div class="bg-white px-6 sm:px-10 lg:px-20 py-10">
+
+  <div class="bg-blue-950 px-6 sm:px-10 lg:px-20 py-10">
     <!-- Title -->
     <div class="flex justify-center items-center">
-      <p class="font-bold text-blue-900 text-2xl sm:text-3xl text-center">
+      <p class="font-bold text-white text-2xl sm:text-3xl text-center">
         Our Core Services
       </p>
     </div>
 
-    <!-- Grid -->
-    <div class="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-16 py-10">
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
-
+    <div class="max-w-screen-xl mx-auto px-2 md:px-4 lg:px-16 py-10">
+      <div
+        class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth lg:grid lg:grid-cols-3 lg:gap-10 lg:overflow-visible">
         <!-- Card 1 -->
-        <div class="bg-blue-950 rounded-xl flex flex-col justify-center py-8 px-6">
-          <div class="flex justify-center">
-            <img :src="graphic" alt="" class="rounded-xl h-40 md:h-44 lg:h-48 object-contain" />
-          </div>
-          <div class="text-white text-lg md:text-xl py-3 text-center font-semibold">
-            Graphic Design
-          </div>
-          <div class="text-gray-300 py-2 text-center text-sm md:text-base">
-            Crafting visually stunning logos, brand identities, and creative
-            designs that make your business stand out from the crowd.
-          </div>
+        <div
+          class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl flex flex-col justify-center py-8 px-6">
+          <div class="flex justify-center"> <img :src="graphic" alt=""
+              class="rounded-xl h-40 md:h-44 lg:h-48 object-contain" /> </div>
+          <div class="text-white text-lg md:text-xl py-3 text-center font-semibold"> Graphic Design </div>
+          <div class="text-gray-300 py-2 text-center text-sm md:text-base"> Crafting visually stunning logos, brand
+            identities, and creative designs that make your business stand out from the crowd. </div>
+        </div> <!-- Card 2 -->
+        <div
+          class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl flex flex-col justify-center py-8 px-6">
+          <div class="flex justify-center"> <img :src="web" alt=""
+              class="rounded-xl h-40 md:h-44 lg:h-48 object-contain" /> </div>
+          <div class="text-white text-lg md:text-xl py-3 text-center font-semibold"> Web Development </div>
+          <div class="text-gray-300 py-2 text-center text-sm md:text-base"> Building fast, responsive, and user-friendly
+            websites tailored to engage your audience and drive conversions. </div>
+        </div> <!-- Card 3 -->
+        <div
+          class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl flex flex-col justify-center py-8 px-6">
+          <div class="flex justify-center"> <img :src="marketing" alt=""
+              class="rounded-xl h-40 md:h-44 lg:h-48 object-contain" /> </div>
+          <div class="text-white text-lg md:text-xl py-3 text-center font-semibold"> Digital Marketing </div>
+          <div class="text-gray-300 py-2 text-center text-sm md:text-base"> Boosting your online presence and ROI with
+            data-driven SEO, social media marketing and targeted ad campaigns. </div>
         </div>
-
-        <!-- Card 2 -->
-        <div class="bg-blue-950 rounded-xl flex flex-col justify-center py-8 px-6">
-          <div class="flex justify-center">
-            <img :src="web" alt="" class="rounded-xl h-40 md:h-44 lg:h-48 object-contain" />
-          </div>
-          <div class="text-white text-lg md:text-xl py-3 text-center font-semibold">
-            Web Development
-          </div>
-          <div class="text-gray-300 py-2 text-center text-sm md:text-base">
-            Building fast, responsive, and user-friendly websites tailored to
-            engage your audience and drive conversions.
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="bg-blue-950 rounded-xl flex flex-col justify-center py-8 px-6
-                md:col-span-2 md:max-w-md md:mx-auto
-                lg:col-span-1 lg:max-w-none">
-
-          <div class="flex justify-center">
-            <img :src="marketing" alt="" class="rounded-xl h-40 md:h-44 lg:h-48 object-contain" />
-          </div>
-
-          <div class="text-white text-lg md:text-xl py-3 text-center font-semibold">
-            Digital Marketing
-          </div>
-
-          <div class="text-gray-300 py-2 text-center text-sm md:text-base">
-            Boosting your online presence and ROI with data-driven SEO, social
-            media marketing and targeted ad campaigns.
-          </div>
-
-        </div>
-
       </div>
-
     </div>
+
     <!-- Button -->
     <div class="flex justify-center pt-5">
-      <button type="button"
-        class="text-black bg-white rounded-lg py-2 px-5 font-bold cursor-pointer border  
-        border-orange-500 hover:bg-orange-300 transition duration-300">
+      <button type="button" class="text-black bg-white rounded-lg py-2 px-5 font-bold cursor-pointer border  
+      border-orange-500 hover:bg-orange-300 transition duration-300">
         All Services
       </button>
     </div>
   </div>
-  <div class="bg-white">
+
+  <div class="bg-blue-950">
     <div class="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-16 py-16">
 
       <!-- Title -->
-      <h2 class="font-bold text-blue-900 text-3xl md:text-4xl mb-6">
+      <h2 class="font-bold text-white text-3xl md:text-4xl mb-6">
         Why Us?
       </h2>
 
       <!-- Description -->
-      <p class="text-lg text-gray-700 max-w-3xl mb-12">
+      <p class="text-lg text-gray-300 max-w-3xl mb-12">
         We believe that every brand has a unique story to tell. As your
         dedicated digital partner, we combine stunning graphics, robust web
         development, and data-driven marketing to turn your vision into reality.
       </p>
 
       <!-- Cards Container -->
-      <div class="bg-gray-200 rounded-2xl p-6 md:p-10 shadow-lg">
+      <div class="bg-[#0b0b45] rounded-2xl p-6 md:p-10 shadow-lg">
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="flex gap-4 px-4 overflow-x-auto no-scrollbar
+         snap-x snap-mandatory scroll-smooth
+         md:grid md:grid-cols-2 lg:grid-cols-4
+         md:overflow-visible">
 
           <!-- Card 1 -->
-          <div class="bg-white rounded-xl p-6 text-center">
+          <div class="w-[75%] max-w-[220px] md:w-full md:max-w-none
+            flex-shrink-0 md:flex-shrink
+            snap-center bg-gray-200 rounded-xl p-4 sm:p-6 text-center">
             <div class="flex justify-center mb-4">
               <img :src="tick" class="h-16 object-contain" />
             </div>
-            <h3 class="text-blue-950 text-lg font-bold mb-3">
-              Innovation
-            </h3>
+            <h3 class="text-blue-950 text-lg font-bold mb-3">Innovation</h3>
             <p class="text-blue-950 text-sm">
-              Delivering creative designs and modern marketing strategies to help
-              your brand stand out in the ever-evolving digital landscape.
+              Delivering creative designs and modern marketing strategies to help your brand stand out.
             </p>
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-white rounded-xl p-6 text-center">
+          <div class="w-[75%] max-w-[220px] md:w-full md:max-w-none
+            flex-shrink-0 md:flex-shrink
+            snap-center bg-gray-200 rounded-xl p-4 sm:p-6 text-center">
             <div class="flex justify-center mb-4">
               <img :src="group" class="h-16 object-contain" />
             </div>
-            <h3 class="text-blue-950 text-lg font-bold mb-3">
-              Collaboration
-            </h3>
+            <h3 class="text-blue-950 text-lg font-bold mb-3">Collaboration</h3>
             <p class="text-blue-950 text-sm">
-              Working closely with you to understand your unique vision and turn it
-              into tailored digital solutions that drive measurable success.
+              Working closely with you to understand your vision and deliver results.
             </p>
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-white rounded-xl p-6 text-center">
+          <div class="w-[75%] max-w-[220px] md:w-full md:max-w-none
+            flex-shrink-0 md:flex-shrink
+            snap-center bg-gray-200 rounded-xl p-4 sm:p-6 text-center">
             <div class="flex justify-center mb-4">
               <img :src="calendar" class="h-16 object-contain" />
             </div>
-            <h3 class="text-blue-950 text-lg font-bold mb-3">
-              Excellence
-            </h3>
+            <h3 class="text-blue-950 text-lg font-bold mb-3">Excellence</h3>
             <p class="text-blue-950 text-sm">
-              Maintaining the highest standards in design aesthetics, seamless web
-              performance, and ROI-driven marketing campaigns.
+              Maintaining high standards in design, performance, and marketing.
             </p>
           </div>
 
           <!-- Card 4 -->
-          <div class="bg-white rounded-xl p-6 text-center">
+          <div class="w-[75%] max-w-[220px] md:w-full md:max-w-none
+            flex-shrink-0 md:flex-shrink
+            snap-center bg-gray-200 rounded-xl p-4 sm:p-6 text-center">
             <div class="flex justify-center mb-4">
               <img :src="book" class="h-16 object-contain" />
             </div>
-            <h3 class="text-blue-950 text-lg font-bold mb-3">
-              Integrity
-            </h3>
+            <h3 class="text-blue-950 text-lg font-bold mb-3">Integrity</h3>
             <p class="text-blue-950 text-sm">
-              Operating with full transparency, honest communication, and a strong
-              commitment to delivering your projects on time.
+              Transparency, honesty, and commitment in every project.
             </p>
           </div>
 
@@ -229,66 +228,120 @@ onMounted(() => {
 
     </div>
   </div>
-  <div class="bg-white">
+  <div class="bg-blue-950">
     <div class="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-16 py-16">
 
       <!-- Title -->
-      <h2 class="font-bold text-blue-900 text-3xl md:text-4xl mb-6">
+      <h2 class="font-bold text-white text-3xl md:text-4xl mb-6">
         Our Team Members
       </h2>
 
       <!-- Description -->
-      <p class="text-lg text-gray-700 max-w-3xl mb-12">
-        We believe that every brand has a unique story to tell. As your
-        dedicated digital partner, we combine stunning graphics, robust web
-        development, and data-driven marketing to turn your vision into reality.
+      <p class="text-lg text-gray-300 max-w-3xl mb-12">
+        We believe that every brand has a unique story to tell...
       </p>
 
-      <!-- Team Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Carousel -->
+      <div class="relative w-full max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-auto">
 
-        <!-- Member 1 -->
-        <div class="bg-blue-950 rounded-xl p-8 flex flex-col items-center text-center">
-          <h3 class="text-white font-bold mb-4">Tareq</h3>
-          <div class="h-40 flex items-center justify-center mb-5">
-            <img :src="account" class="max-h-full object-contain" />
+        <!-- Slides -->
+        <div class="overflow-hidden relative">
+
+          <!-- Slide wrapper -->
+          <div class="flex transition-transform duration-500 ease-in-out touch-pan-y"
+            :style="{ transform: `translateX(-${currentSlide * 100}%)` }" @touchstart="handleTouchStart"
+            @touchmove="handleTouchMove" @touchend="handleTouchEnd">
+
+            <!-- Member 1 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-[#0b0b45] rounded-xl 
+            p-8 md:p-10 lg:p-12
+            min-h-[400px] md:min-h-[450px] lg:min-h-[500px]
+            flex flex-col items-center text-center">
+                <h3 class="text-white font-bold mb-4 text-md">Tareq</h3>
+                <div class="w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 mb-4 flex-shrink-0">
+                  <img :src="tareq"
+                    class="w-full h-full object-cover rounded-full border-4 border-white/10 shadow-lg shadow-blue-500/25" />
+                </div>
+                <p class="text-white text-md font-bold mt-10">
+                  Graphic Design & Branding Design Specialist
+                </p>
+              </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-[#0b0b45] rounded-xl 
+            p-8 md:p-10 lg:p-12
+            min-h-[400px] md:min-h-[450px] lg:min-h-[500px]
+            flex flex-col items-center text-center">
+                <h3 class="text-white font-bold mb-4 text-md">Ifty</h3>
+                <div class="w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 mb-4 flex-shrink-0">
+                  <img :src="ifty"
+                    class="w-full h-full object-cover rounded-full border-4 border-white/10 shadow-lg shadow-blue-500/25" />
+                </div>
+                <p class="text-white text-md font-bold mt-10">
+                  Web Design & Full Stack Developer
+                </p>
+              </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-[#0b0b45] rounded-xl 
+            p-8 md:p-10 lg:p-12
+            min-h-[400px] md:min-h-[450px] lg:min-h-[500px]
+            flex flex-col items-center text-center">
+                <h3 class="text-white font-bold mb-4 text-md">Sejan</h3>
+                <div class="w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 mb-4 flex-shrink-0">
+                  <img :src="sejan"
+                    class="w-full h-full object-cover rounded-full border-4 border-white/10 shadow-lg shadow-blue-500/25" />
+                </div>
+                <p class="text-white text-md font-bold mt-10">
+                  Business Development Executive
+                </p>
+              </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-[#0b0b45] rounded-xl 
+            p-8 md:p-10 lg:p-12
+            min-h-[400px] md:min-h-[450px] lg:min-h-[500px]
+            flex flex-col items-center text-center">
+                <h3 class="text-white font-bold mb-4 text-md">Sabbir</h3>
+                <div class="w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 mb-4 flex-shrink-0">
+                  <img :src="sabbir"
+                    class="w-full h-full object-cover rounded-full border-4 border-white/10 shadow-lg shadow-blue-500/25" />
+                </div>
+                <p class="text-white text-md font-bold mt-10">
+                  Graphic & UI/UX Designer
+                </p>
+              </div>
+            </div>
+
           </div>
-          <p class="text-white text-sm min-h-[48px]">
-            Graphic Design & Branding Design Specialist
-          </p>
+
         </div>
 
-        <!-- Member 2 -->
-        <div class="bg-blue-950 rounded-xl p-8 flex flex-col items-center text-center">
-          <h3 class="text-white font-bold mb-4">Ifty</h3>
-          <div class="h-40 flex items-center justify-center mb-5">
-            <img :src="account" class="max-h-full object-contain" />
-          </div>
-          <p class="text-white text-sm min-h-[48px]">
-            Web Design & Full Stack Developer
-          </p>
-        </div>
+        <!-- Controls -->
+        <button @click="currentSlide = (currentSlide - 1 + 4) % 4" class="absolute top-1/2 -left-6 md:-left-10 -translate-y-1/2
+         w-10 h-10 flex items-center justify-center
+         text-white text-4xl rounded-full cursor-pointer
+         transition-all duration-300">
+          ‹
+        </button>
 
-        <!-- Member 3 -->
-        <div class="bg-blue-950 rounded-xl p-8 flex flex-col items-center text-center">
-          <h3 class="text-white font-bold mb-4">Sejan</h3>
-          <div class="h-40 flex items-center justify-center mb-5">
-            <img :src="account" class="max-h-full object-contain" />
-          </div>
-          <p class="text-white text-sm min-h-[48px]">
-            Business Development Executive (BDE)
-          </p>
-        </div>
+        <button @click="currentSlide = (currentSlide + 1) % 4" class="absolute top-1/2 -right-6 md:-right-10 -translate-y-1/2
+         w-10 h-10 flex items-center justify-center
+         text-white text-4xl rounded-full cursor-pointer
+         transition-all duration-300">
+          ›
+        </button>
 
-        <!-- Member 4 -->
-        <div class="bg-blue-950 rounded-xl p-8 flex flex-col items-center text-center">
-          <h3 class="text-white font-bold mb-4">Sabbir</h3>
-          <div class="h-40 flex items-center justify-center mb-5">
-            <img :src="account" class="max-h-full object-contain" />
-          </div>
-          <p class="text-white text-sm min-h-[48px]">
-            Graphic & UI/UX Designer
-          </p>
+        <div class="flex justify-center mt-6 gap-2">
+          <span v-for="i in 4" :key="i" @click="currentSlide = i - 1" class="w-3 h-3 rounded-full cursor-pointer"
+            :class="currentSlide === i - 1 ? 'bg-white' : 'bg-white/40'"></span>
         </div>
 
       </div>
@@ -303,7 +356,26 @@ onMounted(() => {
 }
 
 @keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
+
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+/* Hide scrollbar but keep swipe */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 </style>

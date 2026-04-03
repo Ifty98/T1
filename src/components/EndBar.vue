@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import FaqCard from "@/components/FaqCard.vue"
-import logo from "@/assets/logo.svg"
+import logo from "@/assets/logo.png"
 import facebook from "@/assets/EndBar/facebook.svg"
 import twitter from "@/assets/EndBar/twitter.svg"
 import linkedin from "@/assets/EndBar/linkedin.svg"
@@ -96,14 +96,13 @@ import location from "@/assets/EndBar/location.svg"
         </div>
         <div class="border-t border-gray-300 my-10 mx-5"></div>
         <!-- Desktop Navbar (hidden on sm & md) -->
-        <!-- Desktop Navbar (UNCHANGED) -->
         <div class="hidden lg:block w-full">
             <div class="max-w-screen-xl mx-auto px-6 lg:px-10 mb-10">
                 <div class="flex justify-between items-center">
 
                     <!-- Logo -->
                     <div class="flex items-center">
-                        <img :src="logo" alt="t1-logo" class="h-8 flex-shrink-0">
+                        <img :src="logo" alt="logo" class="h-10 flex-shrink-0">
                     </div>
 
                     <!-- Navigation -->
@@ -156,11 +155,6 @@ import location from "@/assets/EndBar/location.svg"
                     <div class="flex gap-2 items-center text-xs">
                         <img :src="mail" class="h-5">
                         t1@services.ac.uk
-                    </div>
-
-                    <div class="flex gap-2 items-center text-xs">
-                        <img :src="phone" class="h-5">
-                        +44 7834275779
                     </div>
 
                     <div class="flex gap-2 items-center text-xs">
