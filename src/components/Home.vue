@@ -7,13 +7,12 @@ import tick from "@/assets/Home/tick.svg";
 import group from "@/assets/Home/group.svg";
 import calendar from "@/assets/Home/calendar.svg";
 import book from "@/assets/Home/book.svg";
-import account from "@/assets/Home/account.png";
 import ifty from "@/assets/Home/Photos/Ifty.png";
 import sejan from "@/assets/Home/Photos/Sejan.png";
 import tareq from "@/assets/Home/Photos/Tareq.png";
 import sabbir from "@/assets/Home/Photos/Sabbir.png";
 
-import { ref, onMounted } from "vue"
+import { ref, onMounted, onUnmounted } from "vue"
 
 const text = "Design, Web & Marketing"
 const typedText = ref("")
@@ -48,13 +47,48 @@ const handleTouchMove = (e: TouchEvent) => {
 
 const handleTouchEnd = () => {
   const diff = startX.value - endX.value
-
-  if (diff > 50) {
-    currentSlide.value = (currentSlide.value + 1) % 4
-  } else if (diff < -50) {
-    currentSlide.value = (currentSlide.value - 1 + 4) % 4
-  }
+  if (diff > 50) nextSlide()
+  else if (diff < -50) prevSlide()
+  
+  pauseForInteraction() // pause 10s after swipe
 }
+
+let autoSlideInterval: number | undefined = undefined
+let pauseTimeout: number | undefined = undefined
+const totalSlides = 4
+
+const nextSlide = () => {
+  currentSlide.value = (currentSlide.value + 1) % totalSlides
+}
+
+const prevSlide = () => {
+  currentSlide.value = (currentSlide.value - 1 + totalSlides) % totalSlides
+}
+
+// Start auto-slide
+const startAutoSlide = () => {
+  clearInterval(autoSlideInterval)
+  autoSlideInterval = window.setInterval(() => {
+    nextSlide()
+  }, 3000)
+}
+
+// Stop auto-slide immediately
+const pauseAutoSlide = () => {
+  clearInterval(autoSlideInterval)
+}
+
+// Pause auto-slide for 10 seconds
+const pauseForInteraction = () => {
+  pauseAutoSlide()
+  clearTimeout(pauseTimeout)
+  pauseTimeout = window.setTimeout(() => {
+    startAutoSlide()
+  }, 10000) // 10 seconds
+}
+
+onMounted(() => startAutoSlide())
+onUnmounted(() => pauseAutoSlide())
 </script>
 
 <template>
@@ -238,7 +272,9 @@ const handleTouchEnd = () => {
 
       <!-- Description -->
       <p class="text-lg text-gray-300 max-w-3xl mb-12">
-        We believe that every brand has a unique story to tell...
+        Every project we take on starts with a vision, and our team of designers 
+        and developers is here to make that vision a reality, blending creativity, 
+        technology, and strategy along the way.
       </p>
 
       <!-- Carousel -->
@@ -325,14 +361,16 @@ const handleTouchEnd = () => {
         </div>
 
         <!-- Controls -->
-        <button @click="currentSlide = (currentSlide - 1 + 4) % 4" class="absolute top-1/2 -left-6 md:-left-10 -translate-y-1/2
+        <button @click="prevSlide(); pauseForInteraction()"
+        class="absolute top-1/2 -left-6 md:-left-10 -translate-y-1/2
          w-10 h-10 flex items-center justify-center
          text-white text-4xl rounded-full cursor-pointer
          transition-all duration-300">
           ‹
         </button>
 
-        <button @click="currentSlide = (currentSlide + 1) % 4" class="absolute top-1/2 -right-6 md:-right-10 -translate-y-1/2
+        <button @click="nextSlide(); pauseForInteraction()"
+        class="absolute top-1/2 -right-6 md:-right-10 -translate-y-1/2
          w-10 h-10 flex items-center justify-center
          text-white text-4xl rounded-full cursor-pointer
          transition-all duration-300">
