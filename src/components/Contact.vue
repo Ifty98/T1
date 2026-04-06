@@ -29,7 +29,7 @@ import background1 from "@/assets/Contact/background1.png"
 </script>
 
 <template>
-    <section class="bg-blue-950 py-15">
+    <section class="bg-slate-950 py-15">
         <div class="relative max-w-screen-xl mx-auto rounded-xl overflow-hidden shadow-2xl">
 
             <!-- Background image for sm + md -->
@@ -39,7 +39,7 @@ import background1 from "@/assets/Contact/background1.png"
             </div>
 
             <!-- Main content -->
-            <div class="relative bg-transparent lg:bg-blue-900 flex flex-col lg:flex-row items-stretch gap-10">
+            <div class="relative bg-transparent lg:bg-blue-950 flex flex-col lg:flex-row items-stretch gap-10">
 
                 <!-- TEXT -->
                 <div class="lg:w-3/5 text-center lg:text-left flex flex-col justify-center px-10 py-16 z-10">
@@ -155,7 +155,7 @@ import background1 from "@/assets/Contact/background1.png"
                                 +44 7834275779
                             </p>
                         </div>
-                        
+
                     </div>
                     <div class="flex gap-3 items-start">
 
@@ -173,18 +173,17 @@ import background1 from "@/assets/Contact/background1.png"
                                 United Kingdom
                             </p>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="bg-[#0b0b45] rounded-xl h-2/5 shadow-2xl p-8">
                     <h2 class="text-white text-xl font-bold mb-6">Let's Talk Strategy</h2>
                     <p class="text-gray-400 text-sm pb-2">
-                        Want to discuss your project in detail? Schedule a free consultation 
-                        with our design and marketing experts. We'll help you find the perfect 
+                        Want to discuss your project in detail? Schedule a free consultation
+                        with our design and marketing experts. We'll help you find the perfect
                         digital solutions for your business growth.
                     </p>
-                    <button type="submit"
-                        class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold 
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold 
                         py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition 
                         duration-300 cursor-pointer">
                         Book a meeting

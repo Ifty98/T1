@@ -49,7 +49,7 @@ const handleTouchEnd = () => {
   const diff = startX.value - endX.value
   if (diff > 50) nextSlide()
   else if (diff < -50) prevSlide()
-  
+
   pauseForInteraction() // pause 10s after swipe
 }
 
@@ -92,7 +92,7 @@ onUnmounted(() => pauseAutoSlide())
 </script>
 
 <template>
-  <div class="bg-blue-950 text-white">
+  <div class="bg-slate-950 text-white">
     <div class="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-16 py-16 lg:py-24">
       <div class="flex flex-col lg:flex-row items-center gap-12">
         <!-- LEFT CONTENT -->
@@ -133,7 +133,7 @@ onUnmounted(() => pauseAutoSlide())
     </div>
   </div>
 
-  <div class="bg-blue-950 px-6 sm:px-10 lg:px-20 py-10">
+  <div class="bg-slate-950 px-6 sm:px-10 lg:px-20 py-10">
     <!-- Title -->
     <div class="flex justify-center items-center">
       <p class="font-bold text-white text-2xl sm:text-3xl text-center">
@@ -181,7 +181,7 @@ onUnmounted(() => pauseAutoSlide())
     </div>
   </div>
 
-  <div class="bg-blue-950">
+  <div class="bg-slate-950">
     <div class="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-16 py-16">
 
       <!-- Title -->
@@ -262,7 +262,7 @@ onUnmounted(() => pauseAutoSlide())
 
     </div>
   </div>
-  <div class="bg-blue-950">
+  <div class="bg-slate-950">
     <div class="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-16 py-16">
 
       <!-- Title -->
@@ -272,8 +272,8 @@ onUnmounted(() => pauseAutoSlide())
 
       <!-- Description -->
       <p class="text-lg text-gray-300 max-w-3xl mb-12">
-        Every project we take on starts with a vision, and our team of designers 
-        and developers is here to make that vision a reality, blending creativity, 
+        Every project we take on starts with a vision, and our team of designers
+        and developers is here to make that vision a reality, blending creativity,
         technology, and strategy along the way.
       </p>
 
@@ -361,16 +361,14 @@ onUnmounted(() => pauseAutoSlide())
         </div>
 
         <!-- Controls -->
-        <button @click="prevSlide(); pauseForInteraction()"
-        class="absolute top-1/2 -left-6 md:-left-10 -translate-y-1/2
+        <button @click="prevSlide(); pauseForInteraction()" class="absolute top-1/2 -left-6 md:-left-10 -translate-y-1/2
          w-10 h-10 flex items-center justify-center
          text-white text-4xl rounded-full cursor-pointer
          transition-all duration-300">
           ‹
         </button>
 
-        <button @click="nextSlide(); pauseForInteraction()"
-        class="absolute top-1/2 -right-6 md:-right-10 -translate-y-1/2
+        <button @click="nextSlide(); pauseForInteraction()" class="absolute top-1/2 -right-6 md:-right-10 -translate-y-1/2
          w-10 h-10 flex items-center justify-center
          text-white text-4xl rounded-full cursor-pointer
          transition-all duration-300">

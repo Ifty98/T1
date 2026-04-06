@@ -10,7 +10,7 @@ import location from "@/assets/EndBar/location.svg"
 </script>
 
 <template>
-    <footer class="bg-blue-950 text-white px-0 py-5 lg:px-60">
+    <footer class="bg-slate-950 text-white px-0 py-5 lg:px-60">
         <div class="flex justify-center text-xl pt-10">
             <h1>Frequently Asked Questions</h1>
         </div>
