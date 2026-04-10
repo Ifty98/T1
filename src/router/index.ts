@@ -4,6 +4,8 @@ import Home from '@/components/Home.vue'
 import Services from '@/components/Services.vue'
 import Contact from '@/components/Contact.vue'
 import Portfolio from '@/components/Portfolio.vue'
+import AboutUs from '@/components/AboutUs.vue'
+import Membership from "@/components/Membership.vue"
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -25,6 +27,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/portfolio',
     name: 'Portfolio',
     component: Portfolio
+  },
+  {
+    path: '/aboutus',
+    name: 'About Us',
+    component: AboutUs
+  },
+  {
+    path: '/membership',
+    name: 'Membership',
+    component: Membership
   }
 ]
 

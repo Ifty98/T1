@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import NavBar from './components/NavBar.vue'
 import EndBar from "@/components/EndBar.vue"
-import Portfolio from "@/components/Portfolio.vue"
+import AboutUs from "@/components/AboutUs.vue"
 </script>
 
 <template>

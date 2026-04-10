@@ -89,6 +89,7 @@ const pauseForInteraction = () => {
 
 onMounted(() => startAutoSlide())
 onUnmounted(() => pauseAutoSlide())
+
 </script>
 
 <template>
@@ -97,36 +98,36 @@ onUnmounted(() => pauseAutoSlide())
       <div class="flex flex-col lg:flex-row items-center gap-12">
         <!-- LEFT CONTENT -->
         <div class="flex-1 text-center lg:text-left">
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" data-aos="fade-up">
             Transform your Brand with
           </h1>
 
-          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-orange-400">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-orange-400" data-aos="fade-up">
             {{ typedText }}
             <span v-if="!typingFinished" class="cursor">|</span>
           </h2>
 
-          <p class="py-6 text-gray-200 max-w-xl mx-auto lg:mx-0">
+          <p class="py-6 text-gray-200 max-w-xl mx-auto lg:mx-0" data-aos="fade-up">
             We provide cutting-edge web design, creative graphics, and
             data-driven marketing strategies to scale your business.
           </p>
 
           <!-- BUTTONS -->
-          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button type="button" class="bg-white text-black font-bold rounded-lg py-3 px-6 hover:bg-gray-300 
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up">
+            <router-link to="services" class="bg-white text-black font-bold rounded-lg py-3 px-6 hover:bg-gray-300 
               cursor-pointer transition duration-300">
               Explore Services
-            </button>
+            </router-link>
 
-            <button type="button" class="bg-white text-black font-bold rounded-lg py-3 px-6 hover:bg-gray-300 
+            <router-link to="/portfolio" class="bg-white text-black font-bold rounded-lg py-3 px-6 hover:bg-gray-300 
               cursor-pointer transition duration-300">
               Our Portfolio
-            </button>
+            </router-link>
           </div>
         </div>
 
         <!-- RIGHT IMAGE -->
-        <div class="flex-1 flex justify-center">
+        <div class="flex-1 flex justify-center" data-aos="fade-up">
           <img :src="pic1" alt="pic1" class="w-full max-w-md lg:max-w-lg xl:max-w-xl object-contain" />
         </div>
       </div>
@@ -135,13 +136,13 @@ onUnmounted(() => pauseAutoSlide())
 
   <div class="bg-slate-950 px-6 sm:px-10 lg:px-20 py-10">
     <!-- Title -->
-    <div class="flex justify-center items-center">
+    <div class="flex justify-center items-center" data-aos="fade-up">
       <p class="font-bold text-white text-2xl sm:text-3xl text-center">
         Our Core Services
       </p>
     </div>
 
-    <div class="max-w-screen-xl mx-auto px-2 md:px-4 lg:px-16 py-10">
+    <div class="max-w-screen-xl mx-auto px-2 md:px-4 lg:px-16 py-10" data-aos="fade-up">
       <div
         class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth lg:grid lg:grid-cols-3 lg:gap-10 lg:overflow-visible">
         <!-- Card 1 -->
@@ -174,10 +175,10 @@ onUnmounted(() => pauseAutoSlide())
 
     <!-- Button -->
     <div class="flex justify-center pt-5">
-      <button type="button" class="text-black bg-white rounded-lg py-2 px-5 font-bold cursor-pointer border  
+      <router-link to="services" class="text-black bg-white rounded-lg py-2 px-5 font-bold cursor-pointer border  
       border-orange-500 hover:bg-orange-300 transition duration-300">
         All Services
-      </button>
+      </router-link>
     </div>
   </div>
 
@@ -185,19 +186,19 @@ onUnmounted(() => pauseAutoSlide())
     <div class="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-16 py-16">
 
       <!-- Title -->
-      <h2 class="font-bold text-white text-3xl md:text-4xl mb-6">
+      <h2 class="font-bold text-white text-3xl md:text-4xl mb-6" data-aos="fade-up">
         Why Us?
       </h2>
 
       <!-- Description -->
-      <p class="text-lg text-gray-300 max-w-3xl mb-12">
+      <p class="text-lg text-gray-300 max-w-3xl mb-12" data-aos="fade-up">
         We believe that every brand has a unique story to tell. As your
         dedicated digital partner, we combine stunning graphics, robust web
         development, and data-driven marketing to turn your vision into reality.
       </p>
 
       <!-- Cards Container -->
-      <div class="bg-[#0b0b45] rounded-2xl p-6 md:p-10 shadow-lg">
+      <div class="bg-[#0b0b45] rounded-2xl p-6 md:p-10 shadow-lg" data-aos="fade-up">
 
         <div class="flex gap-4 px-4 overflow-x-auto no-scrollbar
          snap-x snap-mandatory scroll-smooth
@@ -266,19 +267,19 @@ onUnmounted(() => pauseAutoSlide())
     <div class="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-16 py-16">
 
       <!-- Title -->
-      <h2 class="font-bold text-white text-3xl md:text-4xl mb-6">
+      <h2 class="font-bold text-white text-3xl md:text-4xl mb-6" data-aos="fade-up">
         Our Team Members
       </h2>
 
       <!-- Description -->
-      <p class="text-lg text-gray-300 max-w-3xl mb-12">
+      <p class="text-lg text-gray-300 max-w-3xl mb-12" data-aos="fade-up">
         Every project we take on starts with a vision, and our team of designers
         and developers is here to make that vision a reality, blending creativity,
         technology, and strategy along the way.
       </p>
 
       <!-- Carousel -->
-      <div class="relative w-full max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-auto">
+      <div class="relative w-full max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-auto" data-aos="fade-up">
 
         <!-- Slides -->
         <div class="overflow-hidden relative">

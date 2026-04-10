@@ -11,92 +11,98 @@ import location from "@/assets/EndBar/location.svg"
 
 <template>
     <footer class="bg-slate-950 text-white px-0 py-5 lg:px-60">
-        <div class="flex justify-center text-xl pt-10">
+        <div class="flex justify-center text-xl pt-10" data-aos="fade-up">
             <h1>Frequently Asked Questions</h1>
         </div>
-        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5">
+        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5"
+        data-aos="fade-up">
             <FaqCard>
                 <template #question>
                     What services do you provide?
                 </template>
                 <template #answer>
-                    Now is the winter of our discontent
-                    Made glorious summer by this sun of York;
-                    And all the clouds that lour'd upon our house
-                    In the deep bosom of the ocean buried.
+                    We combine creativity and technology to deliver impactful 
+                    digital solutions. Our services include web design and 
+                    development, branding, logo creation, and user experience 
+                    design, everything you need to build a strong and memorable 
+                    online presence.
                 </template>
                 <template #number>
                     01
                 </template>
             </FaqCard>
         </div>
-        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5">
+        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5" 
+        data-aos="fade-up">
             <FaqCard>
                 <template #question>
                     How long does it take to complete a project?
                 </template>
                 <template #answer>
-                    Now is the winter of our discontent
-                    Made glorious summer by this sun of York;
-                    And all the clouds that lour'd upon our house
-                    In the deep bosom of the ocean buried.
+                    The duration of a project depends on its complexity and 
+                    requirements. Smaller projects can take as little as 1–2 weeks, 
+                    while more comprehensive websites or branding packages may 
+                    take 3–6 weeks. We’ll provide a detailed timeline before 
+                    starting and keep you informed every step of the way.
                 </template>
                 <template #number>
                     02
                 </template>
             </FaqCard>
         </div>
-        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5">
+        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5" 
+        data-aos="fade-up">
             <FaqCard>
                 <template #question>
                     What if I want changes to the design?
                 </template>
                 <template #answer>
-                    Now is the winter of our discontent
-                    Made glorious summer by this sun of York;
-                    And all the clouds that lour'd upon our house
-                    In the deep bosom of the ocean buried.
+                    We welcome feedback and revisions throughout the design process. 
+                    Your satisfaction is important to us, so we include a set 
+                    number of revisions to refine the design until it meets your 
+                    expectations. Additional revisions can also be arranged if needed.
                 </template>
                 <template #number>
                     03
                 </template>
             </FaqCard>
         </div>
-        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5">
+        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5" 
+        data-aos="fade-up">
             <FaqCard>
                 <template #question>
                     How do we get started with a project?
                 </template>
                 <template #answer>
-                    Now is the winter of our discontent
-                    Made glorious summer by this sun of York;
-                    And all the clouds that lour'd upon our house
-                    In the deep bosom of the ocean buried.
+                    Getting started is simple. Just reach out to us through our contact 
+                    form with details about your project. We’ll review your requirements, 
+                    get in touch to discuss your goals, and provide a tailored plan to 
+                    bring your ideas to life.
                 </template>
                 <template #number>
                     04
                 </template>
             </FaqCard>
         </div>
-        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5">
+        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5" 
+        data-aos="fade-up">
             <FaqCard>
                 <template #question>
                     Do you offer custom pricing packages?
                 </template>
                 <template #answer>
-                    Now is the winter of our discontent
-                    Made glorious summer by this sun of York;
-                    And all the clouds that lour'd upon our house
-                    In the deep bosom of the ocean buried.
+                    Yes, we offer custom pricing tailored to each project. Every business 
+                    has different needs, so we provide personalised quotes based on your 
+                    specific requirements, goals, and scope of work.
                 </template>
                 <template #number>
                     05
                 </template>
             </FaqCard>
         </div>
-        <div class="border-t border-gray-300 my-10 mx-5"></div>
+        <div class="border-t border-gray-300 my-10 mx-5" data-aos="fade-up"></div>
         <!-- Desktop Navbar (hidden on sm & md) -->
-        <div class="hidden lg:block w-full">
+        <div class="hidden lg:block w-full" data-aos="fade-up">
             <div class="max-w-screen-xl mx-auto px-6 lg:px-10 mb-10">
                 <div class="flex justify-between items-center">
 
@@ -107,18 +113,18 @@ import location from "@/assets/EndBar/location.svg"
 
                     <!-- Navigation -->
                     <ul class="flex gap-6 xl:gap-10 text-gray-300 items-center">
-                        <li
+                        <router-link to="/"
                             class="px-3 py-2 hover:bg-black rounded-full transition duration-300 cursor-pointer text-xs xl:text-sm">
-                            Home</li>
-                        <li
+                            Home</router-link>
+                        <router-link to="/services"
                             class="px-3 py-2 hover:bg-black rounded-full transition duration-300 cursor-pointer text-xs xl:text-sm">
-                            Services</li>
-                        <li
+                            Services</router-link>
+                        <router-link to="/portfolio"
                             class="px-3 py-2 hover:bg-black rounded-full transition duration-300 cursor-pointer text-xs xl:text-sm">
-                            Portfolio</li>
-                        <li
+                            Portfolio</router-link>
+                        <router-link to="/aboutus"
                             class="px-3 py-2 hover:bg-black rounded-full transition duration-300 cursor-pointer text-xs xl:text-sm">
-                            About Us</li>
+                            About Us</router-link>
                     </ul>
 
                     <!-- Desktop Social Icons -->
@@ -134,7 +140,7 @@ import location from "@/assets/EndBar/location.svg"
 
 
         <!-- Mobile + Tablet Social Icons ONLY -->
-        <div class="block lg:hidden w-full">
+        <div class="block lg:hidden w-full" data-aos="fade-up">
             <div class="max-w-screen-xl mx-auto px-6 mb-6">
                 <ul class="flex justify-center gap-4 items-center">
                     <li class="cursor-pointer"><img :src="facebook" class="h-5"></li>
@@ -143,7 +149,7 @@ import location from "@/assets/EndBar/location.svg"
                 </ul>
             </div>
         </div>
-        <div class="w-full border-t border-gray-200">
+        <div class="w-full border-t border-gray-200" data-aos="fade-up">
             <div class="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-0 xl:px-40 py-6">
 
                 <div class="flex flex-col gap-4 
@@ -171,7 +177,7 @@ import location from "@/assets/EndBar/location.svg"
 
             </div>
         </div>
-        <div class="flex justify-center items-center mt-6 text-gray-400">
+        <div class="flex justify-center items-center mt-6 text-gray-400" data-aos="fade-up">
             © 2026 T1 services. All rights reserved.
         </div>
     </footer>

@@ -75,7 +75,7 @@ function selectImage(img: string) {
     <div class="bg-slate-950 text-white flex items-center py-10">
 
         <div class="relative w-full lg:max-w-screen-xl lg:mx-auto rounded-xl overflow-hidden shadow-2xl bg-cover bg-center"
-            :style="{ backgroundImage: `url(${background})` }">
+            :style="{ backgroundImage: `url(${background})` }" data-aos="fade-up">
 
             <!-- Overlay -->
             <div class="absolute inset-0 bg-black/60"></div>
@@ -107,7 +107,7 @@ function selectImage(img: string) {
         <div class="max-w-screen-xl mx-auto px-6">
 
             <!-- FILTERS -->
-            <div class="flex flex-wrap gap-3 mb-10 justify-center">
+            <div class="flex flex-wrap gap-3 mb-10 justify-center" data-aos="fade-up">
 
                 <button v-for="f in filters" :key="f.key" @click="active = f.key"
                     class="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer"
@@ -123,7 +123,8 @@ function selectImage(img: string) {
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <div v-for="item in filtered" :key="item.id" @click="selectImage(item.img)"
-                    class="group relative aspect-[4/5] sm:aspect-[3/4] cursor-pointer">
+                    class="group relative aspect-[4/5] sm:aspect-[3/4] cursor-pointer"
+                    data-aos="fade-up">
 
                     <!-- CARD -->
                     <div class="w-full h-full bg-black rounded-xl overflow-hidden">

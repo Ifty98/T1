@@ -54,14 +54,14 @@ watch(route, () => {
               Services
             </router-link>
           </li>
-          <li
+          <router-link to="/membership"
             class="px-3 py-2 whitespace-nowrap text-white font-bold hover:bg-white hover:text-black rounded-full transition duration-300 cursor-pointer">
             🔥 Prime Membership
-          </li>
-          <li
+          </router-link>
+          <router-link to="/aboutus"
             class="px-3 py-2 whitespace-nowrap text-white hover:bg-white hover:text-black rounded-full transition duration-300 cursor-pointer">
             About Us
-          </li>
+          </router-link>
         </ul>
 
         <!-- RIGHT (Book Button, always visible) -->
@@ -115,13 +115,13 @@ watch(route, () => {
           Services
         </RouterLink>
 
-        <a href="#" class="py-2 px-2 text-white hover:bg-gray-300 hover:text-black rounded-lg">
-          Prime Membership
-        </a>
+        <RouterLink to="/membership" class="py-2 px-2 text-white hover:bg-gray-300 hover:text-black rounded-lg">
+          🔥 Prime Membership
+        </RouterLink>
 
-        <a href="#" class="py-2 px-2 text-white hover:bg-gray-300 hover:text-black rounded-lg">
+        <RouterLink to="/aboutus" class="py-2 px-2 text-white hover:bg-gray-300 hover:text-black rounded-lg">
           About Us
-        </a>
+        </RouterLink>
 
       </div>
 

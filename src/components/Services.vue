@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import background1 from "@/assets/background-1.png"
+import background1 from "@/assets/Services/background-1.png"
 import brand from "@/assets/Services/Brand identity.png"
 import UXUIDesign from "@/assets/Services/UX-UI Design.png"
 import WebDev from "@/assets/Services/Web Dev.png"
@@ -12,7 +12,7 @@ import Arrow from "@/assets/Services/Arrow.png"
 <template>
   <section class="bg-slate-950 py-15">
 
-    <div class="relative max-w-screen-xl mx-auto rounded-xl overflow-hidden">
+    <div class="relative max-w-screen-xl mx-auto rounded-xl overflow-hidden" data-aos="fade-up">
 
       <!-- Background image for sm + md -->
       <div class="absolute inset-0 lg:hidden">
@@ -33,8 +33,8 @@ import Arrow from "@/assets/Services/Arrow.png"
             </span>
           </h1>
 
-          <p class="text-gray-200 py-6 text-sm md:text- max-w-lg mx-auto lg:mx-0">
-            At T1, we offer a complete suite of digital services designed to elevate
+          <p class="text-gray-200 py-6 text-sm max-w-lg mx-auto lg:mx-0">
+            At Use-Key, we offer a complete suite of digital services designed to elevate
             your brand and drive measurable growth. From crafting visually stunning
             logo designs and building high-performance websites to executing data-driven
             digital marketing campaigns, our expert team is here to transform your online
@@ -61,290 +61,308 @@ import Arrow from "@/assets/Services/Arrow.png"
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Card -->
-          <div class="bg-slate-750 backdrop-blur-md border border-3 
-                      border-white hover:border-blue-900 transition-all 
-                      rounded-2xl shadow-lg
-                      hover:shadow-2xl hover:-translate-y-2
-                      transition duration-300 ease-in-out
-                      py-6 px-5 md:py-10 md:px-10
-                      max-w-sm md:max-w-lg mx-auto cursor-pointer">
+          <div data-aos="fade-up">
+            <div class="bg-slate-900 backdrop-blur-md border-2 border-white 
+            transform-gpu will-change-transform
+            transition-transform transition-shadow transition-colors
+            duration-300 ease-out
+            rounded-2xl shadow-md
+            hover:shadow-xl hover:-translate-y-1.5 hover:scale-[1.02]
+            py-6 px-5 md:py-10 md:px-10
+            max-w-sm md:max-w-lg mx-auto cursor-pointer">
 
-            <!-- Image -->
-            <div class="flex justify-center mb-4 md:mb-6">
-              <img :src="brand" alt="Web Development" class="h-40 lg:h-60 object-contain">
-            </div>
+              <!-- Image -->
+              <div class="flex justify-center mb-4 md:mb-6">
+                <img :src="brand" alt="Web Development" class="h-40 lg:h-60 object-contain">
+              </div>
 
-            <!-- Content -->
-            <div>
-              <h3 class="text-lg md:text-xl text-blue-200 font-bold mb-2 md:mb-3 text-center">
-                Brand Identity & Design
-              </h3>
+              <!-- Content -->
+              <div>
+                <h3 class="text-lg md:text-xl text-blue-200 font-bold mb-2 md:mb-3 text-center">
+                  Brand Identity & Design
+                </h3>
 
-              <p class="text-sm md:text-base text-white px-2 text-center">
-                Crafting memorable visual identities that resonate with your target
-                audience and make your business stand out from the competition.
-              </p>
-            </div>
+                <p class="text-sm md:text-base text-white px-2 text-center">
+                  Crafting memorable visual identities that resonate with your target
+                  audience and make your business stand out from the competition.
+                </p>
+              </div>
 
-            <!-- Small Grid -->
-            <div class="text-white grid grid-cols-2 gap-4 md:gap-8 py-4 md:py-5 text-xs 
+              <!-- Small Grid -->
+              <div class="text-white grid grid-cols-2 gap-4 md:gap-8 py-4 md:py-5 text-xs 
                         px-2 lg:whitespace-nowrap">
-              <div>• Marketing Collaterals</div>
-              <div>• Brand Guidelands</div>
-              <div>• Packaging Design</div>
-            </div>
+                <div>• Marketing Collaterals</div>
+                <div>• Brand Guidelands</div>
+                <div>• Packaging Design</div>
+              </div>
 
-            <!-- Button -->
-            <div class="flex justify-center items-center">
-              <button type="button" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
+              <!-- Button -->
+              <div class="flex justify-center items-center">
+                <router-link to="/contact" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
                                           rounded-2xl flex items-center gap-2
                                           hover:bg-blue-900 hover:text-white transition duration-300
                                           border border-blue-500 cursor-pointer">
-                Book a call
-                <img :src="Arrow" alt="arrow" class="h-8 w-10 object-contain bg-blue-400
+                  Book a call
+                  <img :src="Arrow" alt="arrow" class="h-8 w-10 object-contain bg-blue-400
                 rounded-xl" />
-              </button>
-            </div>
+                </router-link>
+              </div>
 
-          </div>
-
-          <!-- Card -->
-          <div class="bg-slate-750 backdrop-blur-md border border-3 
-                      border-white hover:border-blue-900 transition-all 
-                      rounded-2xl shadow-lg
-                      hover:shadow-2xl hover:-translate-y-2
-                      transition duration-300 ease-in-out
-                      py-6 px-5 md:py-10 md:px-10
-                      max-w-sm md:max-w-lg mx-auto cursor-pointer">
-
-            <!-- Image -->
-            <div class="flex justify-center mb-4 md:mb-6">
-              <img :src="UXUIDesign" alt="Web Development" class="h-40 lg:h-60 object-contain">
-            </div>
-
-            <!-- Content -->
-            <div>
-              <h3 class="text-lg md:text-xl text-blue-200 font-bold mb-2 md:mb-3 text-center">
-                UI/UX Design
-              </h3>
-
-              <p class="text-sm md:text-base text-white px-2 text-center">
-                Designing intuitive, user-centric, and visually stunning interfaces for
-                websites and mobile applications that keep users engaged.
-              </p>
-            </div>
-
-            <!-- Small Grid -->
-            <div class="text-white grid grid-cols-2 gap-4 md:gap-8 py-4 md:py-5 text-xs px-2 lg:whitespace-nowrap">
-              <div>• Wireframing & Prototyping</div>
-              <div>• User Experience (UX) Research</div>
-              <div>• Web Interface Desingn</div>
-              <div>• Mobile App UI</div>
-            </div>
-
-            <!-- Button -->
-            <div class="flex justify-center items-center">
-              <button type="button" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
-                                          rounded-2xl flex items-center gap-2
-                                          hover:bg-blue-900 hover:text-white transition duration-300
-                                          border border-blue-500 cursor-pointer">
-                Book a call
-                <img :src="Arrow" alt="arrow" class="h-8 w-10 object-contain bg-blue-400
-                rounded-xl" />
-              </button>
             </div>
           </div>
 
           <!-- Card -->
-          <div class="bg-slate-750 backdrop-blur-md border border-3 
-                      border-white hover:border-blue-900 transition-all 
-                      rounded-2xl shadow-lg
-                      hover:shadow-2xl hover:-translate-y-2
-                      transition duration-300 ease-in-out
-                      py-6 px-5 md:py-10 md:px-10
-                      max-w-sm md:max-w-lg mx-auto cursor-pointer">
+          <div data-aos="fade-up">
+            <div class="bg-slate-900 backdrop-blur-md border-2 border-white 
+            transform-gpu will-change-transform
+            transition-transform transition-shadow transition-colors
+            duration-300 ease-out
+            rounded-2xl shadow-md
+            hover:shadow-xl hover:-translate-y-1.5 hover:scale-[1.02]
+            py-6 px-5 md:py-10 md:px-10
+            max-w-sm md:max-w-lg mx-auto cursor-pointer" data-aos="fade-up">
 
-            <!-- Image -->
-            <div class="flex justify-center mb-4 md:mb-6">
-              <img :src="WebDev" alt="Web Development" class="h-40 lg:h-60 object-contain">
-            </div>
+              <!-- Image -->
+              <div class="flex justify-center mb-4 md:mb-6">
+                <img :src="UXUIDesign" alt="Web Development" class="h-40 lg:h-60 object-contain">
+              </div>
 
-            <!-- Content -->
-            <div>
-              <h3 class="text-lg md:text-xl text-blue-200 font-bold mb-2 md:mb-3 text-center">
-                Custom Web Development
-              </h3>
+              <!-- Content -->
+              <div>
+                <h3 class="text-lg md:text-xl text-blue-200 font-bold mb-2 md:mb-3 text-center">
+                  UI/UX Design
+                </h3>
 
-              <p class="text-sm md:text-base text-white px-2 text-center">
-                Building fast, secure, responsive, and highly scalable websites tailored perfectly
-                to achieve your unique business goals.
-              </p>
-            </div>
+                <p class="text-sm md:text-base text-white px-2 text-center">
+                  Designing intuitive, user-centric, and visually stunning interfaces for
+                  websites and mobile applications that keep users engaged.
+                </p>
+              </div>
 
-            <!-- Small Grid -->
-            <div class="text-white grid grid-cols-2 gap-4 md:gap-8 py-4 md:py-5 text-xs px-2 lg:whitespace-nowrap">
-              <div>• Corporate Websites</div>
-              <div>• Landing Pages</div>
-              <div>• WordPress & CMS</div>
-              <div>• Performance Optimization</div>
-            </div>
+              <!-- Small Grid -->
+              <div class="text-white grid grid-cols-2 gap-4 md:gap-8 py-4 md:py-5 text-xs px-2 lg:whitespace-nowrap">
+                <div>• Wireframing & Prototyping</div>
+                <div>• User Experience (UX) Research</div>
+                <div>• Web Interface Desingn</div>
+                <div>• Mobile App UI</div>
+              </div>
 
-            <!-- Button -->
-            <div class="flex justify-center items-center">
-              <button type="button" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
+              <!-- Button -->
+              <div class="flex justify-center items-center">
+                <button type="button" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
                                           rounded-2xl flex items-center gap-2
                                           hover:bg-blue-900 hover:text-white transition duration-300
                                           border border-blue-500 cursor-pointer">
-                Book a call
-                <img :src="Arrow" alt="arrow" class="h-8 w-10 object-contain bg-blue-400
+                  Book a call
+                  <img :src="Arrow" alt="arrow" class="h-8 w-10 object-contain bg-blue-400
                 rounded-xl" />
-              </button>
+                </button>
+              </div>
             </div>
-
           </div>
 
           <!-- Card -->
-          <div class="bg-slate-750 backdrop-blur-md border border-3 
-                      border-white hover:border-blue-900 transition-all 
-                      rounded-2xl shadow-lg
-                      hover:shadow-2xl hover:-translate-y-2
-                      transition duration-300 ease-in-out
-                      py-6 px-5 md:py-10 md:px-10
-                      max-w-sm md:max-w-lg mx-auto cursor-pointer">
+          <div data-aos="fade-up">
+            <div class="bg-slate-900 backdrop-blur-md border-2 border-white 
+            transform-gpu will-change-transform
+            transition-transform transition-shadow transition-colors
+            duration-300 ease-out
+            rounded-2xl shadow-md
+            hover:shadow-xl hover:-translate-y-1.5 hover:scale-[1.02]
+            py-6 px-5 md:py-10 md:px-10
+            max-w-sm md:max-w-lg mx-auto cursor-pointer" data-aos="fade-up">
 
-            <!-- Image -->
-            <div class="flex justify-center mb-4 md:mb-6">
-              <img :src="ECommerce" alt="Web Development" class="h-40 lg:h-60 object-contain">
-            </div>
+              <!-- Image -->
+              <div class="flex justify-center mb-4 md:mb-6">
+                <img :src="WebDev" alt="Web Development" class="h-40 lg:h-60 object-contain">
+              </div>
 
-            <!-- Content -->
-            <div>
-              <h3 class="text-lg md:text-xl text-blue-200 font-bold mb-2 md:mb-3 text-center">
-                E-Commerce Solutions
-              </h3>
+              <!-- Content -->
+              <div>
+                <h3 class="text-lg md:text-xl text-blue-200 font-bold mb-2 md:mb-3 text-center">
+                  Custom Web Development
+                </h3>
 
-              <p class="text-sm md:text-base text-white px-2 text-center">
-                Creating high-converting online stores that provide a seamless shopping
-                experience and drive continuous sales growth.
-              </p>
-            </div>
+                <p class="text-sm md:text-base text-white px-2 text-center">
+                  Building fast, secure, responsive, and highly scalable websites tailored perfectly
+                  to achieve your unique business goals.
+                </p>
+              </div>
 
-            <!-- Small Grid -->
-            <div class="text-white grid grid-cols-2 gap-4 md:gap-8 py-4 md:py-5 text-xs px-2 lg:whitespace-nowrap">
-              <div>• Shopify Development</div>
-              <div>• WooCommerce Setup</div>
-              <div>• Payment Gateway Integration</div>
-              <div>• Pruduct Page Optimization</div>
-            </div>
+              <!-- Small Grid -->
+              <div class="text-white grid grid-cols-2 gap-4 md:gap-8 py-4 md:py-5 text-xs px-2 lg:whitespace-nowrap">
+                <div>• Corporate Websites</div>
+                <div>• Landing Pages</div>
+                <div>• WordPress & CMS</div>
+                <div>• Performance Optimization</div>
+              </div>
 
-            <!-- Button -->
-            <div class="flex justify-center items-center">
-              <button type="button" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
+              <!-- Button -->
+              <div class="flex justify-center items-center">
+                <router-link to="/contact" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
                                           rounded-2xl flex items-center gap-2
                                           hover:bg-blue-900 hover:text-white transition duration-300
                                           border border-blue-500 cursor-pointer">
-                Book a call
-                <img :src="Arrow" alt="arrow" class="h-8 w-10 object-contain bg-blue-400
+                  Book a call
+                  <img :src="Arrow" alt="arrow" class="h-8 w-10 object-contain bg-blue-400
                 rounded-xl" />
-              </button>
-            </div>
+                </router-link>
+              </div>
 
+            </div>
           </div>
 
           <!-- Card -->
-          <div class="bg-slate-750 backdrop-blur-md border border-3 
-                      border-white hover:border-blue-900 transition-all 
-                      rounded-2xl shadow-lg
-                      hover:shadow-2xl hover:-translate-y-2
-                      transition duration-300 ease-in-out
-                      py-6 px-5 md:py-10 md:px-10
-                      max-w-sm md:max-w-lg mx-auto cursor-pointer">
+          <div data-aos="fade-up">
+            <div class="bg-slate-900 backdrop-blur-md border-2 border-white 
+            transform-gpu will-change-transform
+            transition-transform transition-shadow transition-colors
+            duration-300 ease-out
+            rounded-2xl shadow-md
+            hover:shadow-xl hover:-translate-y-1.5 hover:scale-[1.02]
+            py-6 px-5 md:py-10 md:px-10
+            max-w-sm md:max-w-lg mx-auto cursor-pointer" data-aos="fade-up">
 
-            <!-- Image -->
-            <div class="flex justify-center mb-4 md:mb-6">
-              <img :src="Marketing" alt="Web Development" class="h-40 lg:h-60 object-contain">
-            </div>
+              <!-- Image -->
+              <div class="flex justify-center mb-4 md:mb-6">
+                <img :src="ECommerce" alt="Web Development" class="h-40 lg:h-60 object-contain">
+              </div>
 
-            <!-- Content -->
-            <div>
-              <h3 class="text-lg md:text-xl text-blue-200 font-bold mb-2 md:mb-3 text-center">
-                Social Media Marketing
-              </h3>
+              <!-- Content -->
+              <div>
+                <h3 class="text-lg md:text-xl text-blue-200 font-bold mb-2 md:mb-3 text-center">
+                  E-Commerce Solutions
+                </h3>
 
-              <p class="text-sm md:text-base text-white px-2 text-center">
-                Building strong online communities, increasing brand awareness, and engaging
-                your audience across all major social platforms.
-              </p>
-            </div>
+                <p class="text-sm md:text-base text-white px-2 text-center">
+                  Creating high-converting online stores that provide a seamless shopping
+                  experience and drive continuous sales growth.
+                </p>
+              </div>
 
-            <!-- Small Grid -->
-            <div class="text-white grid grid-cols-2 gap-4 md:gap-8 py-4 md:py-5 text-xs px-2 lg:whitespace-nowrap">
-              <div>• Social Media Strategy</div>
-              <div>• Content Creation</div>
-              <div>• Community Management</div>
-              <div>• Influencer Outreach</div>
-            </div>
+              <!-- Small Grid -->
+              <div class="text-white grid grid-cols-2 gap-4 md:gap-8 py-4 md:py-5 text-xs px-2 lg:whitespace-nowrap">
+                <div>• Shopify Development</div>
+                <div>• WooCommerce Setup</div>
+                <div>• Payment Gateway Integration</div>
+                <div>• Pruduct Page Optimization</div>
+              </div>
 
-            <!-- Button -->
-            <div class="flex justify-center items-center">
-              <button type="button" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
+              <!-- Button -->
+              <div class="flex justify-center items-center">
+                <router-link to="/contact" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
                                           rounded-2xl flex items-center gap-2
                                           hover:bg-blue-900 hover:text-white transition duration-300
                                           border border-blue-500 cursor-pointer">
-                Book a call
-                <img :src="Arrow" alt="arrow" class="h-8 w-10 object-contain bg-blue-400
+                  Book a call
+                  <img :src="Arrow" alt="arrow" class="h-8 w-10 object-contain bg-blue-400
                 rounded-xl" />
-              </button>
-            </div>
+                </router-link>
+              </div>
 
+            </div>
           </div>
 
           <!-- Card -->
-          <div class="bg-slate-750 backdrop-blur-md border border-3 
-                      border-white hover:border-blue-900 transition-all 
-                      rounded-2xl shadow-lg
-                      hover:shadow-2xl hover:-translate-y-2
-                      transition duration-300 ease-in-out
-                      py-6 px-5 md:py-10 md:px-10
-                      max-w-sm md:max-w-lg mx-auto cursor-pointer">
+          <div data-aos="fade-up">
+            <div class="bg-slate-900 backdrop-blur-md border-2 border-white 
+            transform-gpu will-change-transform
+            transition-transform transition-shadow transition-colors
+            duration-300 ease-out
+            rounded-2xl shadow-md
+            hover:shadow-xl hover:-translate-y-1.5 hover:scale-[1.02]
+            py-6 px-5 md:py-10 md:px-10
+            max-w-sm md:max-w-lg mx-auto cursor-pointer" data-aos="fade-up">
 
-            <!-- Image -->
-            <div class="flex justify-center mb-4 md:mb-6">
-              <img :src="Advertising" alt="Web Development" class="h-40 lg:h-60 object-contain">
-            </div>
+              <!-- Image -->
+              <div class="flex justify-center mb-4 md:mb-6">
+                <img :src="Marketing" alt="Web Development" class="h-40 lg:h-60 object-contain">
+              </div>
 
-            <!-- Content -->
-            <div>
-              <h3 class="text-lg md:text-xl text-blue-200 font-bold mb-2 md:mb-3 text-center">
-                SEO & Paid Advertising
-              </h3>
+              <!-- Content -->
+              <div>
+                <h3 class="text-lg md:text-xl text-blue-200 font-bold mb-2 md:mb-3 text-center">
+                  Social Media Marketing
+                </h3>
 
-              <p class="text-sm md:text-base text-white px-2 text-center">
-                Driving highly tageted traffic to your website and maximizing your Return
-                on Investment (ROI) through data-driven campaigns.
-              </p>
-            </div>
+                <p class="text-sm md:text-base text-white px-2 text-center">
+                  Building strong online communities, increasing brand awareness, and engaging
+                  your audience across all major social platforms.
+                </p>
+              </div>
 
-            <!-- Small Grid -->
-            <div class="text-white grid grid-cols-2 gap-4 md:gap-8 py-4 md:py-5 text-xs px-2 lg:whitespace-nowrap">
-              <div>• Search Engine Optimization (SEO)</div>
-              <div>• Google Ads (PPC)</div>
-              <div>• Facebook & Instagram Ads</div>
-              <div>• Analytics & Performance Reporting</div>
-            </div>
+              <!-- Small Grid -->
+              <div class="text-white grid grid-cols-2 gap-4 md:gap-8 py-4 md:py-5 text-xs px-2 lg:whitespace-nowrap">
+                <div>• Social Media Strategy</div>
+                <div>• Content Creation</div>
+                <div>• Community Management</div>
+                <div>• Influencer Outreach</div>
+              </div>
 
-            <!-- Button -->
-            <div class="flex justify-center items-center">
-              <button type="button" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
+              <!-- Button -->
+              <div class="flex justify-center items-center">
+                <router-link to="/contact" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
                                           rounded-2xl flex items-center gap-2
                                           hover:bg-blue-900 hover:text-white transition duration-300
                                           border border-blue-500 cursor-pointer">
-                Book a call
-                <img :src="Arrow" alt="arrow" class="h-8 w-10 object-contain bg-blue-400
+                  Book a call
+                  <img :src="Arrow" alt="arrow" class="h-8 w-10 object-contain bg-blue-400
                 rounded-xl" />
-              </button>
-            </div>
+                </router-link>
+              </div>
 
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div data-aos="fade-up">
+            <div class="bg-slate-900 backdrop-blur-md border-2 border-white 
+            transform-gpu will-change-transform
+            transition-transform transition-shadow transition-colors
+            duration-300 ease-out
+            rounded-2xl shadow-md
+            hover:shadow-xl hover:-translate-y-1.5 hover:scale-[1.02]
+            py-6 px-5 md:py-10 md:px-10
+            max-w-sm md:max-w-lg mx-auto cursor-pointer" data-aos="fade-up">
+
+              <!-- Image -->
+              <div class="flex justify-center mb-4 md:mb-6">
+                <img :src="Advertising" alt="Web Development" class="h-40 lg:h-60 object-contain">
+              </div>
+
+              <!-- Content -->
+              <div>
+                <h3 class="text-lg md:text-xl text-blue-200 font-bold mb-2 md:mb-3 text-center">
+                  SEO & Paid Advertising
+                </h3>
+
+                <p class="text-sm md:text-base text-white px-2 text-center">
+                  Driving highly tageted traffic to your website and maximizing your Return
+                  on Investment (ROI) through data-driven campaigns.
+                </p>
+              </div>
+
+              <!-- Small Grid -->
+              <div class="text-white grid grid-cols-2 gap-4 md:gap-8 py-4 md:py-5 text-xs px-2 lg:whitespace-nowrap">
+                <div>• Search Engine Optimization (SEO)</div>
+                <div>• Google Ads (PPC)</div>
+                <div>• Facebook & Instagram Ads</div>
+                <div>• Analytics & Performance Reporting</div>
+              </div>
+
+              <!-- Button -->
+              <div class="flex justify-center items-center">
+                <router-link to="/contact" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
+                                          rounded-2xl flex items-center gap-2
+                                          hover:bg-blue-900 hover:text-white transition duration-300
+                                          border border-blue-500 cursor-pointer">
+                  Book a call
+                  <img :src="Arrow" alt="arrow" class="h-8 w-10 object-contain bg-blue-400
+                rounded-xl" />
+                </router-link>
+              </div>
+
+            </div>
           </div>
 
         </div>
