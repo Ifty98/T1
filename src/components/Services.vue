@@ -120,7 +120,7 @@ import Arrow from "@/assets/Services/Arrow.png"
             rounded-2xl shadow-md
             hover:shadow-xl hover:-translate-y-1.5 hover:scale-[1.02]
             py-6 px-5 md:py-10 md:px-10
-            max-w-sm md:max-w-lg mx-auto cursor-pointer" data-aos="fade-up">
+            max-w-sm md:max-w-lg mx-auto cursor-pointer">
 
               <!-- Image -->
               <div class="flex justify-center mb-4 md:mb-6">
@@ -170,7 +170,7 @@ import Arrow from "@/assets/Services/Arrow.png"
             rounded-2xl shadow-md
             hover:shadow-xl hover:-translate-y-1.5 hover:scale-[1.02]
             py-6 px-5 md:py-10 md:px-10
-            max-w-sm md:max-w-lg mx-auto cursor-pointer" data-aos="fade-up">
+            max-w-sm md:max-w-lg mx-auto cursor-pointer">
 
               <!-- Image -->
               <div class="flex justify-center mb-4 md:mb-6">
@@ -221,7 +221,7 @@ import Arrow from "@/assets/Services/Arrow.png"
             rounded-2xl shadow-md
             hover:shadow-xl hover:-translate-y-1.5 hover:scale-[1.02]
             py-6 px-5 md:py-10 md:px-10
-            max-w-sm md:max-w-lg mx-auto cursor-pointer" data-aos="fade-up">
+            max-w-sm md:max-w-lg mx-auto cursor-pointer">
 
               <!-- Image -->
               <div class="flex justify-center mb-4 md:mb-6">
@@ -272,7 +272,7 @@ import Arrow from "@/assets/Services/Arrow.png"
             rounded-2xl shadow-md
             hover:shadow-xl hover:-translate-y-1.5 hover:scale-[1.02]
             py-6 px-5 md:py-10 md:px-10
-            max-w-sm md:max-w-lg mx-auto cursor-pointer" data-aos="fade-up">
+            max-w-sm md:max-w-lg mx-auto cursor-pointer">
 
               <!-- Image -->
               <div class="flex justify-center mb-4 md:mb-6">
@@ -323,7 +323,7 @@ import Arrow from "@/assets/Services/Arrow.png"
             rounded-2xl shadow-md
             hover:shadow-xl hover:-translate-y-1.5 hover:scale-[1.02]
             py-6 px-5 md:py-10 md:px-10
-            max-w-sm md:max-w-lg mx-auto cursor-pointer" data-aos="fade-up">
+            max-w-sm md:max-w-lg mx-auto cursor-pointer">
 
               <!-- Image -->
               <div class="flex justify-center mb-4 md:mb-6">
