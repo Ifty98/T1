@@ -180,7 +180,7 @@ const resetForm = (): void => {
                         <div class="flex flex-col">
                             <p class="text-white font-bold">Email</p>
                             <p class="text-gray-400 text-sm">
-                                t1@services.ac.uk
+                                info@use-key.co.uk
                             </p>
                         </div>
 
@@ -192,7 +192,7 @@ const resetForm = (): void => {
                         <div class="flex flex-col">
                             <p class="text-white font-bold">Phone</p>
                             <p class="text-gray-400 text-sm">
-                                +44 7834275779
+                                 +44 3301330496
                             </p>
                         </div>
 
@@ -204,10 +204,10 @@ const resetForm = (): void => {
                         <div class="flex flex-col">
                             <p class="text-white font-bold">Office</p>
                             <p class="text-gray-400 text-sm">
-                                5511 Brampton Street
+                                26 Brampton Grove
                             </p>
                             <p class="text-gray-400 text-sm">
-                                London, NW8 4XP
+                                London, NW4 4AJ
                             </p>
                             <p class="text-gray-400 text-sm">
                                 United Kingdom

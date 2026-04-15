@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import pic1 from "@/assets/Home/pic1.png";
-import graphic from "@/assets/Home/graphic.svg";
-import web from "@/assets/Home/web.svg";
-import marketing from "@/assets/Home/marketing.svg";
+import graphic from "@/assets/Home/graphic.png";
+import web from "@/assets/Home/web.png";
+import marketing from "@/assets/Home/marketing.png";
 import tick from "@/assets/Home/tick.svg";
 import group from "@/assets/Home/group.svg";
 import calendar from "@/assets/Home/calendar.svg";
@@ -14,7 +14,7 @@ import sabbir from "@/assets/Home/Photos/Sabbir.png";
 
 import { ref, onMounted, onUnmounted } from "vue"
 
-const text = "Design, Web & Marketing"
+const text = "Web, Design & Marketing"
 const typedText = ref("")
 let index = 0
 const typingFinished = ref(false)

@@ -160,7 +160,12 @@ import location from "@/assets/EndBar/location.svg"
 
                     <div class="flex gap-2 items-center text-xs">
                         <img :src="mail" class="h-5">
-                        t1@services.ac.uk
+                        info@use-key.co.uk
+                    </div>
+
+                    <div class="flex gap-2 items-center text-xs">
+                        <img :src="phone" class="h-5">
+                         +44 3301330496
                     </div>
 
                     <div class="flex gap-2 items-center text-xs">
