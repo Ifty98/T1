@@ -147,7 +147,9 @@ onUnmounted(() => pauseAutoSlide())
         class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth lg:grid lg:grid-cols-3 lg:gap-10 lg:overflow-visible">
         <!-- Card 1 -->
         <div
-          class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl flex flex-col justify-center py-8 px-6">
+          class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl 
+                transition duration-300 transform hover:-translate-y-2 
+                hover:scale-105 hover:shadow-2xl flex flex-col justify-center py-8 px-6">
           <div class="flex justify-center"> <img :src="graphic" alt=""
               class="rounded-xl h-40 md:h-44 lg:h-48 object-contain" /> </div>
           <div class="text-white text-lg md:text-xl py-3 text-center font-semibold"> Graphic Design </div>
@@ -155,7 +157,9 @@ onUnmounted(() => pauseAutoSlide())
             identities, and creative designs that make your business stand out from the crowd. </div>
         </div> <!-- Card 2 -->
         <div
-          class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl flex flex-col justify-center py-8 px-6">
+          class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl 
+                 transition duration-300 transform hover:-translate-y-2 
+                 hover:scale-105 hover:shadow-2xl flex flex-col justify-center py-8 px-6">
           <div class="flex justify-center"> <img :src="web" alt=""
               class="rounded-xl h-40 md:h-44 lg:h-48 object-contain" /> </div>
           <div class="text-white text-lg md:text-xl py-3 text-center font-semibold"> Web Development </div>
@@ -163,7 +167,9 @@ onUnmounted(() => pauseAutoSlide())
             websites tailored to engage your audience and drive conversions. </div>
         </div> <!-- Card 3 -->
         <div
-          class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl flex flex-col justify-center py-8 px-6">
+          class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl 
+                 transition duration-300 transform hover:-translate-y-2 
+                 hover:scale-105 hover:shadow-2xl flex flex-col justify-center py-8 px-6">
           <div class="flex justify-center"> <img :src="marketing" alt=""
               class="rounded-xl h-40 md:h-44 lg:h-48 object-contain" /> </div>
           <div class="text-white text-lg md:text-xl py-3 text-center font-semibold"> Digital Marketing </div>
@@ -208,7 +214,9 @@ onUnmounted(() => pauseAutoSlide())
           <!-- Card 1 -->
           <div class="w-[75%] max-w-[220px] md:w-full md:max-w-none
             flex-shrink-0 md:flex-shrink
-            snap-center bg-gray-200 rounded-xl p-4 sm:p-6 text-center">
+            snap-center bg-gray-200 rounded-xl p-4 sm:p-6 text-center
+            transition duration-300 transform hover:-translate-y-2 
+            hover:scale-105 hover:shadow-2xl">
             <div class="flex justify-center mb-4">
               <img :src="tick" class="h-16 object-contain" />
             </div>
@@ -221,7 +229,9 @@ onUnmounted(() => pauseAutoSlide())
           <!-- Card 2 -->
           <div class="w-[75%] max-w-[220px] md:w-full md:max-w-none
             flex-shrink-0 md:flex-shrink
-            snap-center bg-gray-200 rounded-xl p-4 sm:p-6 text-center">
+            snap-center bg-gray-200 rounded-xl p-4 sm:p-6 text-center 
+            transition duration-300 transform hover:-translate-y-2 
+            hover:scale-105 hover:shadow-2xl">
             <div class="flex justify-center mb-4">
               <img :src="group" class="h-16 object-contain" />
             </div>
@@ -234,7 +244,9 @@ onUnmounted(() => pauseAutoSlide())
           <!-- Card 3 -->
           <div class="w-[75%] max-w-[220px] md:w-full md:max-w-none
             flex-shrink-0 md:flex-shrink
-            snap-center bg-gray-200 rounded-xl p-4 sm:p-6 text-center">
+            snap-center bg-gray-200 rounded-xl p-4 sm:p-6 text-center 
+            transition duration-300 transform hover:-translate-y-2 
+            hover:scale-105 hover:shadow-2xl">
             <div class="flex justify-center mb-4">
               <img :src="calendar" class="h-16 object-contain" />
             </div>
@@ -247,7 +259,9 @@ onUnmounted(() => pauseAutoSlide())
           <!-- Card 4 -->
           <div class="w-[75%] max-w-[220px] md:w-full md:max-w-none
             flex-shrink-0 md:flex-shrink
-            snap-center bg-gray-200 rounded-xl p-4 sm:p-6 text-center">
+            snap-center bg-gray-200 rounded-xl p-4 sm:p-6 text-center 
+            transition duration-300 transform hover:-translate-y-2 
+            hover:scale-105 hover:shadow-2xl">
             <div class="flex justify-center mb-4">
               <img :src="book" class="h-16 object-contain" />
             </div>

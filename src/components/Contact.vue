@@ -21,7 +21,6 @@ const submitForm = async (): Promise<void> => {
     loading.value = true;
 
     const formData = new URLSearchParams();
-
     formData.append("form-name", "contact");
     formData.append("firstName", firstName.value);
     formData.append("lastName", lastName.value);
@@ -40,12 +39,11 @@ const submitForm = async (): Promise<void> => {
             body: formData.toString(),
         });
 
+        await new Promise(resolve => setTimeout(resolve, 2000));
+
         submitted.value = true;
         resetForm();
 
-        setTimeout(() => {
-            submitted.value = false;
-        }, 5000);
     } catch (error) {
         console.error("Form submission error:", error);
     } finally {
@@ -116,9 +114,11 @@ const resetForm = (): void => {
                     Thank you! Your message has been sent successfully.
                 </div>
 
-                <form name="contact" method="POST" data-netlify="true" @submit.prevent="submitForm" class="space-y-4">
+                <form v-if="!submitted" name="contact" method="POST" data-netlify="true"
+                    data-netlify-honeypot="bot-field" @submit.prevent="submitForm" class="space-y-4">
                     <!-- Netlify hidden input -->
                     <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="bot-field" />
 
                     <!-- Name -->
                     <div class="flex flex-col md:flex-row gap-4">
@@ -139,16 +139,14 @@ const resetForm = (): void => {
 
                     <!-- Phone -->
                     <div class="flex gap-3">
-                        <!-- Country Code -->
                         <select v-model="countryCode" name="countryCode" required
                             class="bg-[#0b0b45] border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer">
                             <option v-for="country in countryCodes" :key="country.code" :value="country.dial_code"
-                                class="bg-[#0b0b45] text-white cursor-pointer">
+                                class="bg-[#0b0b45] text-white">
                                 {{ country.code }} ({{ country.dial_code }})
                             </option>
                         </select>
 
-                        <!-- Phone Number -->
                         <input v-model="phone" name="phone" type="tel" placeholder="Phone number" required
                             class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" />
                     </div>
@@ -158,15 +156,21 @@ const resetForm = (): void => {
                         class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"></textarea>
 
                     <!-- Button -->
-                    <button type="submit"
-                        class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition duration-300 cursor-pointer">
-                        <span>Send</span>
+                    <button type="submit" :disabled="loading"
+                        class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg flex items-center 
+                               cursor-pointer justify-center gap-2 transition duration-300 disabled:opacity-50">
+                        <!-- Normal state -->
+                        <span v-if="!loading">Send</span>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 rotate-45" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                        </svg>
+                        <!-- Loading state -->
+                        <span v-else class="flex items-center gap-2">
+                            <svg class="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"
+                                    fill="none" />
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
+                            </svg>
+                            Sending...
+                        </span>
                     </button>
                 </form>
             </div>
@@ -192,7 +196,7 @@ const resetForm = (): void => {
                         <div class="flex flex-col">
                             <p class="text-white font-bold">Phone</p>
                             <p class="text-gray-400 text-sm">
-                                 +44 3301330496
+                                +44 3301330496
                             </p>
                         </div>
 
