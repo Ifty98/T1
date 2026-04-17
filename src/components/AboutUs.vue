@@ -231,10 +231,10 @@ import process4 from "@/assets/AboutUs/process4.png"
 
                 <!-- Button -->
                 <div class="mt-10">
-                    <a href="/contact" class="bg-blue-500 rounded-lg text-white font-bold cursor-pointer 
+                    <router-link to="/contact" class="bg-blue-500 rounded-lg text-white font-bold cursor-pointer 
                         lg:w-1/3 py-4 px-8 hover:bg-black transition duration-300">
                         Contact Us
-                    </a>
+                    </router-link>
                 </div>
 
             </div>
