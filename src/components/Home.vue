@@ -146,8 +146,7 @@ onUnmounted(() => pauseAutoSlide())
       <div
         class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth lg:grid lg:grid-cols-3 lg:gap-10 lg:overflow-visible">
         <!-- Card 1 -->
-        <div
-          class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl 
+        <div class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl 
                 transition duration-300 transform hover:-translate-y-2 
                 hover:scale-105 hover:shadow-2xl flex flex-col justify-center py-8 px-6">
           <div class="flex justify-center"> <img :src="graphic" alt=""
@@ -156,8 +155,7 @@ onUnmounted(() => pauseAutoSlide())
           <div class="text-gray-300 py-2 text-center text-sm md:text-base"> Crafting visually stunning logos, brand
             identities, and creative designs that make your business stand out from the crowd. </div>
         </div> <!-- Card 2 -->
-        <div
-          class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl 
+        <div class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl 
                  transition duration-300 transform hover:-translate-y-2 
                  hover:scale-105 hover:shadow-2xl flex flex-col justify-center py-8 px-6">
           <div class="flex justify-center"> <img :src="web" alt=""
@@ -166,8 +164,7 @@ onUnmounted(() => pauseAutoSlide())
           <div class="text-gray-300 py-2 text-center text-sm md:text-base"> Building fast, responsive, and user-friendly
             websites tailored to engage your audience and drive conversions. </div>
         </div> <!-- Card 3 -->
-        <div
-          class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl 
+        <div class="min-w-[280px] md:min-w-[320px] lg:min-w-0 snap-start bg-[#0b0b45] rounded-xl 
                  transition duration-300 transform hover:-translate-y-2 
                  hover:scale-105 hover:shadow-2xl flex flex-col justify-center py-8 px-6">
           <div class="flex justify-center"> <img :src="marketing" alt=""

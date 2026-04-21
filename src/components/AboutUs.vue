@@ -81,7 +81,7 @@ import process4 from "@/assets/AboutUs/process4.png"
                         What started as a small team of passionate creatives has evolved into a
                         full-service digital agency. Over the years, we recognized that businesses
                         need more than just a beautiful logo or a basic website, they need a cohesive
-                        digital startegy. That's why we brought together top-tier graphic designers,
+                        digital strategy. That's why we brought together top-tier graphic designers,
                         web developers, and marketing strategits under one roof. Today, we are proud
                         to be the driving force behind the sucess of numerous brands, helping them
                         navigate and dominate the ever-changing digital landscape.
