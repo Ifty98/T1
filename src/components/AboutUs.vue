@@ -50,8 +50,8 @@ import process4 from "@/assets/AboutUs/process4.png"
         </div>
 
         <div class="relative max-w-screen-xl mx-auto overflow-hidden">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 py-10 text-center pt-15" 
-            data-aos="fade-up">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 py-10 text-center pt-15"
+                data-aos="fade-up">
 
                 <div class="bg-blue-950 rounded-xl p-6 md:p-8 shadow-lg hover:scale-105 transition duration-300">
                     <h2 class="text-3xl md:text-4xl font-bold text-orange-400">3+</h2>
@@ -102,8 +102,8 @@ import process4 from "@/assets/AboutUs/process4.png"
                         class="rounded-xl shadow-lg w-full max-w-xs md:max-w-sm lg:max-w-md object-cover">
                 </div>
 
-                <div class="order-1 lg:order-none lg:w-3/5 text-center lg:text-left flex flex-col justify-center" 
-                data-aos="fade-up">
+                <div class="order-1 lg:order-none lg:w-3/5 text-center lg:text-left flex flex-col justify-center"
+                    data-aos="fade-up">
                     <h2 class="font-bold text-white text-3xl md:text-4xl mb-6">
                         Our Mission
                     </h2>
@@ -140,7 +140,7 @@ import process4 from "@/assets/AboutUs/process4.png"
                                     flex-shrink-0 md:flex-shrink
                                     snap-center bg-blue-950 rounded-xl p-4 sm:p-6 text-center
                                     transition duration-300 transform hover:-translate-y-2 
-                                    hover:scale-105 hover:shadow-2xl" >
+                                    hover:scale-105 hover:shadow-2xl">
 
                             <div class="flex justify-center mb-4">
                                 <img :src="process1"
