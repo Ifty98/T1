@@ -149,14 +149,14 @@ import Arrow from "@/assets/Services/Arrow.png"
 
               <!-- Button -->
               <div class="flex justify-center items-center">
-                <button type="button" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
+                <router-link to="/contact" class="bg-slate-750 text-white px-4 py-2 text-sm md:text-base 
                                           rounded-2xl flex items-center gap-2
                                           hover:bg-blue-900 hover:text-white transition duration-300
                                           border border-blue-500 cursor-pointer">
                   Book a call
                   <img :src="Arrow" alt="arrow" class="h-8 w-10 object-contain bg-blue-400
                 rounded-xl" />
-                </button>
+                </router-link>
               </div>
             </div>
           </div>
