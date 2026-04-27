@@ -2,7 +2,7 @@
 import FaqCard from "@/components/FaqCard.vue"
 import logo from "@/assets/logo.png"
 import facebook from "@/assets/EndBar/facebook.svg"
-import twitter from "@/assets/EndBar/twitter.svg"
+import instagram from "@/assets/EndBar/instagram.svg"
 import linkedin from "@/assets/EndBar/linkedin.svg"
 import mail from "@/assets/EndBar/mail.svg"
 import phone from "@/assets/EndBar/phone.svg"
@@ -14,17 +14,16 @@ import location from "@/assets/EndBar/location.svg"
         <div class="flex justify-center text-xl pt-10" data-aos="fade-up">
             <h1>Frequently Asked Questions</h1>
         </div>
-        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5"
-        data-aos="fade-up">
+        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5" data-aos="fade-up">
             <FaqCard>
                 <template #question>
                     What services do you provide?
                 </template>
                 <template #answer>
-                    We combine creativity and technology to deliver impactful 
-                    digital solutions. Our services include web design and 
-                    development, branding, logo creation, and user experience 
-                    design, everything you need to build a strong and memorable 
+                    We combine creativity and technology to deliver impactful
+                    digital solutions. Our services include web design and
+                    development, branding, logo creation, and user experience
+                    design, everything you need to build a strong and memorable
                     online presence.
                 </template>
                 <template #number>
@@ -32,17 +31,16 @@ import location from "@/assets/EndBar/location.svg"
                 </template>
             </FaqCard>
         </div>
-        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5" 
-        data-aos="fade-up">
+        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5" data-aos="fade-up">
             <FaqCard>
                 <template #question>
                     How long does it take to complete a project?
                 </template>
                 <template #answer>
-                    The duration of a project depends on its complexity and 
-                    requirements. Smaller projects can take as little as 1–2 weeks, 
-                    while more comprehensive websites or branding packages may 
-                    take 3–6 weeks. We’ll provide a detailed timeline before 
+                    The duration of a project depends on its complexity and
+                    requirements. Smaller projects can take as little as 1–2 weeks,
+                    while more comprehensive websites or branding packages may
+                    take 3–6 weeks. We’ll provide a detailed timeline before
                     starting and keep you informed every step of the way.
                 </template>
                 <template #number>
@@ -50,16 +48,15 @@ import location from "@/assets/EndBar/location.svg"
                 </template>
             </FaqCard>
         </div>
-        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5" 
-        data-aos="fade-up">
+        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5" data-aos="fade-up">
             <FaqCard>
                 <template #question>
                     What if I want changes to the design?
                 </template>
                 <template #answer>
-                    We welcome feedback and revisions throughout the design process. 
-                    Your satisfaction is important to us, so we include a set 
-                    number of revisions to refine the design until it meets your 
+                    We welcome feedback and revisions throughout the design process.
+                    Your satisfaction is important to us, so we include a set
+                    number of revisions to refine the design until it meets your
                     expectations. Additional revisions can also be arranged if needed.
                 </template>
                 <template #number>
@@ -67,16 +64,15 @@ import location from "@/assets/EndBar/location.svg"
                 </template>
             </FaqCard>
         </div>
-        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5" 
-        data-aos="fade-up">
+        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5" data-aos="fade-up">
             <FaqCard>
                 <template #question>
                     How do we get started with a project?
                 </template>
                 <template #answer>
-                    Getting started is simple. Just reach out to us through our contact 
-                    form with details about your project. We’ll review your requirements, 
-                    get in touch to discuss your goals, and provide a tailored plan to 
+                    Getting started is simple. Just reach out to us through our contact
+                    form with details about your project. We’ll review your requirements,
+                    get in touch to discuss your goals, and provide a tailored plan to
                     bring your ideas to life.
                 </template>
                 <template #number>
@@ -84,15 +80,14 @@ import location from "@/assets/EndBar/location.svg"
                 </template>
             </FaqCard>
         </div>
-        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5" 
-        data-aos="fade-up">
+        <div class="flex justify-center pt-16 px-5 lg:px-0 xl:px-25 md:px-5" data-aos="fade-up">
             <FaqCard>
                 <template #question>
                     Do you offer custom pricing packages?
                 </template>
                 <template #answer>
-                    Yes, we offer custom pricing tailored to each project. Every business 
-                    has different needs, so we provide personalised quotes based on your 
+                    Yes, we offer custom pricing tailored to each project. Every business
+                    has different needs, so we provide personalised quotes based on your
                     specific requirements, goals, and scope of work.
                 </template>
                 <template #number>
@@ -129,9 +124,17 @@ import location from "@/assets/EndBar/location.svg"
 
                     <!-- Desktop Social Icons -->
                     <ul class="flex gap-4 items-center">
-                        <li class="cursor-pointer"><img :src="facebook" class="h-5"></li>
-                        <li class="cursor-pointer"><img :src="twitter" class="h-5"></li>
-                        <li class="cursor-pointer"><img :src="linkedin" class="h-5"></li>
+                        <a href="https://www.facebook.com/profile.php?id=61572072644345" class="cursor-pointer transition duration-300 hover:-translate-y-1 hover:scale-110">
+                            <img :src="facebook" class="h-5 transition duration-300 hover:opacity-80">
+                        </a>
+
+                        <a href="https://www.instagram.com/usekeyhq/" class="cursor-pointer transition duration-300 hover:-translate-y-1 hover:scale-110">
+                            <img :src="instagram" class="h-5 transition duration-300 hover:opacity-80">
+                        </a>
+
+                        <a href="" class="cursor-pointer transition duration-300 hover:-translate-y-1 hover:scale-110">
+                            <img :src="linkedin" class="h-5 transition duration-300 hover:opacity-80">
+                        </a>
                     </ul>
 
                 </div>
@@ -143,9 +146,15 @@ import location from "@/assets/EndBar/location.svg"
         <div class="block lg:hidden w-full" data-aos="fade-up">
             <div class="max-w-screen-xl mx-auto px-6 mb-6">
                 <ul class="flex justify-center gap-4 items-center">
-                    <li class="cursor-pointer"><img :src="facebook" class="h-5"></li>
-                    <li class="cursor-pointer"><img :src="twitter" class="h-5"></li>
-                    <li class="cursor-pointer"><img :src="linkedin" class="h-5"></li>
+                    <a href="https://www.facebook.com/profile.php?id=61572072644345" class="cursor-pointer transition duration-300 hover:-translate-y-1 hover:scale-110">
+                        <img :src="facebook" class="h-5 transition duration-300 hover:opacity-80">
+                    </a>
+                    <a href="https://www.instagram.com/usekeyhq/" class="cursor-pointer transition duration-300 hover:-translate-y-1 hover:scale-110">
+                        <img :src="instagram" class="h-5 transition duration-300 hover:opacity-80">
+                    </a>
+                    <a href="" class="cursor-pointer transition duration-300 hover:-translate-y-1 hover:scale-110">
+                        <img :src="linkedin" class="h-5 transition duration-300 hover:opacity-80">
+                    </a>
                 </ul>
             </div>
         </div>
@@ -165,7 +174,7 @@ import location from "@/assets/EndBar/location.svg"
 
                     <div class="flex gap-2 items-center text-xs">
                         <img :src="phone" class="h-5">
-                         +44 3301330496
+                        +44 3301330496
                     </div>
 
                     <div class="flex gap-2 items-center text-xs">
@@ -183,7 +192,7 @@ import location from "@/assets/EndBar/location.svg"
             </div>
         </div>
         <div class="flex justify-center items-center mt-6 text-gray-400" data-aos="fade-up">
-            © 2026 T1 services. All rights reserved.
+            © 2026 Use-Key services. All rights reserved.
         </div>
     </footer>
 </template>
