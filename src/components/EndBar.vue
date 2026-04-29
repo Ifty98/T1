@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import FaqCard from "@/components/FaqCard.vue"
-import logo from "@/assets/logo.png"
+import logo from "@/assets/logo.webp"
 import facebook from "@/assets/EndBar/facebook.svg"
 import instagram from "@/assets/EndBar/instagram.svg"
 import linkedin from "@/assets/EndBar/linkedin.svg"

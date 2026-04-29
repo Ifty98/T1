@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from "vue"
-import background from "@/assets/Portfolio/background.png"
+import background from "@/assets/Portfolio/background.webp"
 
 // FILTER STATE
 const active = ref("all")
@@ -36,9 +36,9 @@ const brandingImages = Object.values(
 
 // BUILD PROJECTS
 interface Project {
-  id: number
-  category: "web" | "graphic" | "branding"
-  img: string
+    id: number
+    category: "web" | "graphic" | "branding"
+    img: string
 }
 
 let id = 1
@@ -50,24 +50,24 @@ const projects: Project[] = [
 ]
 // FILTER FUNCTION
 function shuffleArray<T>(array: T[]): T[] {
-  const copy = [...array]
-  for (let i = copy.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[copy[i]!, copy[j]!] = [copy[j]!, copy[i]!]
-  }
-  return copy
+    const copy = [...array]
+    for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+            ;[copy[i]!, copy[j]!] = [copy[j]!, copy[i]!]
+    }
+    return copy
 }
 
 const filtered = computed<Project[]>(() => {
-  if (active.value === "all") {
-    return shuffleArray(projects)
-  }
-  return projects.filter(p => p.category === active.value)
+    if (active.value === "all") {
+        return shuffleArray(projects)
+    }
+    return projects.filter(p => p.category === active.value)
 })
 
 const selectedImage = ref<string | null | undefined>(null)
 function selectImage(img: string) {
-  selectedImage.value = img
+    selectedImage.value = img
 }
 </script>
 
@@ -123,8 +123,7 @@ function selectImage(img: string) {
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <div v-for="item in filtered" :key="item.id" @click="selectImage(item.img)"
-                    class="group relative aspect-[4/5] sm:aspect-[3/4] cursor-pointer"
-                    data-aos="fade-up">
+                    class="group relative aspect-[4/5] sm:aspect-[3/4] cursor-pointer" data-aos="fade-up">
 
                     <!-- CARD -->
                     <div class="w-full h-full bg-black rounded-xl overflow-hidden">

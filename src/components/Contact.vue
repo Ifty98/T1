@@ -4,7 +4,7 @@ import imgPhone from "@/assets/EndBar/phone.svg"
 import imgLocation from "@/assets/EndBar/location.svg"
 import { ref } from "vue"
 import { countryCodes } from "@/data/countryCodes";
-import background1 from "@/assets/Contact/background1.png"
+import background1 from "@/assets/Contact/background1.webp"
 
 const firstName = ref<string>("");
 const lastName = ref<string>("");

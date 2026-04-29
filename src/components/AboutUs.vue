@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import background from "@/assets/AboutUs/background.png"
-import planet from "@/assets/AboutUs/planet.png"
-import dartboard from "@/assets/AboutUs/dartboard.png"
-import process1 from "@/assets/AboutUs/process1.png"
-import process2 from "@/assets/AboutUs/process2.png"
-import process3 from "@/assets/AboutUs/process3.png"
-import process4 from "@/assets/AboutUs/process4.png"
+import background from "@/assets/AboutUs/background.webp"
+import planet from "@/assets/AboutUs/planet.webp"
+import dartboard from "@/assets/AboutUs/dartboard.webp"
+import process1 from "@/assets/AboutUs/process1.webp"
+import process2 from "@/assets/AboutUs/process2.webp"
+import process3 from "@/assets/AboutUs/process3.webp"
+import process4 from "@/assets/AboutUs/process4.webp"
 </script>
 
 <template>

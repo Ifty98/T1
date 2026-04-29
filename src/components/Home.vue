@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import pic1 from "@/assets/Home/pic1.png";
-import graphic from "@/assets/Home/graphic.png";
-import web from "@/assets/Home/web.png";
-import marketing from "@/assets/Home/marketing.png";
+import pic1 from "@/assets/Home/pic1.webp";
+import graphic from "@/assets/Home/graphic.webp";
+import web from "@/assets/Home/web.webp";
+import marketing from "@/assets/Home/marketing.webp";
 import tick from "@/assets/Home/tick.svg";
 import group from "@/assets/Home/group.svg";
 import calendar from "@/assets/Home/calendar.svg";
 import book from "@/assets/Home/book.svg";
-import ifty from "@/assets/Home/Photos/Ifty.png";
-import sejan from "@/assets/Home/Photos/Sejan.png";
-import tareq from "@/assets/Home/Photos/Tareq.png";
-import sabbir from "@/assets/Home/Photos/Sabbir.png";
+import ifty from "@/assets/Home/Photos/Ifty.webp";
+import sejan from "@/assets/Home/Photos/Sejan.webp";
+import tareq from "@/assets/Home/Photos/Tareq.webp";
+import sabbir from "@/assets/Home/Photos/Sabbir.webp";
 
 import { ref, onMounted, onUnmounted } from "vue"
 

@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import background1 from "@/assets/Services/background-1.png"
-import brand from "@/assets/Services/Brand identity.png"
-import UXUIDesign from "@/assets/Services/UX-UI Design.png"
-import WebDev from "@/assets/Services/Web Dev.png"
-import ECommerce from "@/assets/Services/E-commerce.png"
-import Marketing from "@/assets/Services/Marketing.png"
-import Advertising from "@/assets/Services/Advertising.png"
-import Arrow from "@/assets/Services/Arrow.png"
+import background1 from "@/assets/Services/background-1.webp"
+import brand from "@/assets/Services/Brand identity.webp"
+import UXUIDesign from "@/assets/Services/UX-UI Design.webp"
+import WebDev from "@/assets/Services/Web Dev.webp"
+import ECommerce from "@/assets/Services/E-commerce.webp"
+import Marketing from "@/assets/Services/Marketing.webp"
+import Advertising from "@/assets/Services/Advertising.webp"
+import Arrow from "@/assets/Services/Arrow.webp"
 </script>
 
 <template>

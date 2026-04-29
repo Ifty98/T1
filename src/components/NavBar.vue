@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import logo from "@/assets/logo.png"
-import account from "@/assets/NavBar/account.png"
+import logo from "@/assets/logo.webp"
+import account from "@/assets/NavBar/account.webp"
 import { ref, watch } from 'vue'
 import { useRoute } from "vue-router"
 
